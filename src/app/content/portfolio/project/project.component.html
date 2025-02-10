@@ -1,0 +1,22 @@
+<div class="project-wrapper" [class.flip]="flip">
+    <div>
+        <img src="{{project.imgUrl}}" alt="">
+    </div>
+    <div>
+        <div>
+            <h2> {{project.name}} </h2>
+            <div>
+                @for (item of project.skills; track $index) {
+                {{item}}
+                @if ($index < project.skills.length-1) {|} } 
+            </div>
+
+            <div>{{project.text}} </div>
+        </div>
+
+            <div>
+                <a class="live" href="{{project.webUrl}}" target="_blank" rel="noopener noreferrer">Live test</a>
+                <a class="git" href="{{project.gitUrl}}" target="_blank" rel="noopener noreferrer">Github</a>
+            </div>
+    </div>
+</div>

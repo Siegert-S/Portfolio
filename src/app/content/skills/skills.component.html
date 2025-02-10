@@ -1,0 +1,43 @@
+<div id="skills" class="skills-wrapper">
+
+    <div>
+        @for (item of skillList; track $index) {
+        <app-skill-icon [iconInfo]="item"></app-skill-icon>
+        }
+    </div>
+
+    <div>
+        <div>
+            <h2>My skills</h2>
+            <div></div>
+        </div>
+        <div>
+            <div>
+                <span>I have gained experience in building projects with different frontend technologies and concepts.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+        <div>
+
+            <div>
+                <span>
+                    Looking for <span style="color:var(--primaryColor) ;">anoterher skill</span> ?
+                </span>
+            </div>
+
+            <div>
+                <span>
+                    Feel free to contact me. I look forward to expanding on my previous knowledge
+                </span>
+            </div>
+
+        </div>
+        <button (click)="scrollToContact()">Get in touch</button>
+
+    </div>
+
+</div>

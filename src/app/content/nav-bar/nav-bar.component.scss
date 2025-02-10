@@ -1,0 +1,129 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bgColor);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.navContent-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 100px 37px 100px;
+    box-sizing: border-box;
+}
+
+.link-wrapper {
+    display: flex;
+    gap: 29px;
+
+    transition: all ease-in-out 100ms;
+
+    a {
+        &:hover {
+            color: var(--secondayrColor);
+        }
+    }
+
+    >:nth-child(4) {
+        display: none;
+    }
+}
+
+.name {
+    font-size: var(--fontSize6);
+    font-weight: 700;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: var(--fontSize7);
+    font-weight: 400;
+
+    cursor: pointer;
+}
+
+.vector {
+    width: 55.5px;
+    border: 1.5px solid var(--primaryColor);
+    border-radius: 3px;
+}
+
+.link-button {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../../assets/img/burgerMenu.svg');
+    transition: all ease-in-out 100ms;
+}
+
+.burgerMenuOpen {
+    background-image: url('../../../assets/img/burgerMenu_open.svg');
+}
+
+
+@media (max-width: 700px) {
+    .link-wrapper {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        width: 250px;
+        transform: translateX(100%);
+
+        top: 86px;
+        background-color: var(--menuBgColor);
+        padding: 24px;
+        z-index: 1;
+
+        >:nth-child(4) {
+            display: block;
+        }
+    }
+
+    .menuOpen {
+        transform: translateX(0%);
+    }
+
+    .link-button {
+        display: block;
+    }
+
+    .navContent-wrapper {
+        padding: 20px 50px 20px 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .link-wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        top: 70px;
+        height: 100vh;
+        background-color: var(--menuBgColor);
+        padding-bottom: 86px;
+        z-index: 1;
+        box-sizing: border-box;
+
+        transform: translateX(100%);
+
+        >:nth-child(4) {
+            display: block;
+        }
+    }
+
+    .menuOpen {
+        transform: translateX(0%);
+    }
+}

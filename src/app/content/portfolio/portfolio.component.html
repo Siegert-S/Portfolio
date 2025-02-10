@@ -1,0 +1,17 @@
+<div id="portfolio" class="portfolio-wrapper">
+    <div>
+        <div class="vektor"></div>
+        <h2>Portfolio</h2>
+        <div class="vektorBig"></div>
+    </div>
+    <div>
+        <span>Explore a selection of my work here - Interact with projects to see my skills in action.</span>
+    </div>
+    <div>
+        @for (item of projects; track $index) {
+        <app-project [project]="item" [flip]="$index % 2"></app-project>
+        <!-- <div> {{item.name}} </div>
+        <div> {{item.flip}} </div> -->
+        }
+    </div>
+</div>

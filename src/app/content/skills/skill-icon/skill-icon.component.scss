@@ -1,0 +1,27 @@
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 12px;
+    width: 88px;
+
+    img {
+        height: 60px;
+        margin-bottom: 5px;
+
+        &:hover {
+            transition: all ease-in-out 125ms;
+            transform: translateY(-10px);
+        }
+    }
+
+    div {
+        font-size: var(--fontSize8);
+        font-weight: 700;
+        max-width: 88px;
+        text-align: center;
+
+    }
+
+}
