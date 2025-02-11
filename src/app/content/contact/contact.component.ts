@@ -1,15 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, ElementRef, inject, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  http = inject(HttpClient);
 
   submitAttempt = false;
 
@@ -26,9 +29,35 @@ export class ContactComponent {
 
   }
 
+  post = {
+    endPoint: 'https://saschasiegert.de/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
   onSubmit() {
     this.submitAttempt = true;
     if (this.form.valid) {
+      console.log(this.form.value);
+
+      this.http.post(this.post.endPoint, this.post.body(this.form.value))
+        .subscribe({
+          next: (response) => {
+            console.log(response);
+
+            this.form.reset();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+
       this.form.reset();
       this.submitAttempt = false;
     }
