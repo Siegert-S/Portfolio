@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 .contact-wrapper {
     display: flex;
     align-items: center;
@@ -21,12 +23,10 @@
         }
 
         >h2 {
-            font-size: var(--fontSize1);
-            font-weight: 700;
+            @include font(var(--fontSize1), 700);
             margin: 0;
             padding: 0;
             text-align: center;
-            line-height: calc(var(--fontSize1) * 1.2);
         }
 
         >:nth-child(3) {
@@ -51,9 +51,7 @@
             >p {
                 margin: 0;
                 padding: 0;
-                font-size: var(--fontSize5);
-                font-weight: 700;
-                line-height: calc(var(--fontSize5) * 1.2);
+                @include font(var(--fontSize5), 700);
             }
 
             >:nth-child(2) {
@@ -62,9 +60,7 @@
                 gap: 16px;
 
                 >span {
-                    font-weight: 400;
-                    font-size: var(--fontSize8);
-                    line-height: calc(var(--fontSize8) * 1.2);
+                    @include font(var(--fontSize8));
                 }
             }
         }
@@ -100,16 +96,12 @@ form {
     width: 100%;
 
     >div {
-
         max-width: 617px;
         width: 100%;
     }
 
     ::placeholder {
-        color: white;
-        font-size: var(--fontSize8);
-        font-weight: 400;
-        line-height: calc(var(--fontSize8) * 1.2);
+        @include font(var(--fontSize8));
     }
 
     >:nth-child(3) {
@@ -134,11 +126,8 @@ form {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: white;
-        font-size: var(--fontSize8);
-        font-weight: 400;
-        line-height: calc(var(--fontSize8) * 1.2);
 
+        @include font(var(--fontSize8));
 
         max-width: 617px;
         width: 100%;
@@ -159,15 +148,9 @@ form {
 
         >input {
             border: none;
-            color: white;
             background-color: var(--bgColor);
             outline: none;
-
-
-            color: white;
-            font-size: var(--fontSize8);
-            font-weight: 400;
-            line-height: calc(var(--fontSize8) * 1.2);
+            @include font(var(--fontSize8));
         }
 
         &:has(textarea) {
@@ -182,11 +165,9 @@ form {
         >textarea {
             resize: none;
             border: none;
-            color: white;
             background-color: var(--bgColor);
             outline: none;
-            font-size: var(--fontSize8);
-            font-weight: 400;
+            @include font(var(--fontSize8));
         }
     }
 
@@ -199,10 +180,7 @@ form {
     }
 
     .error-message {
-        color: var(--errorColor);
-        font-size: var(--fontSize9);
-        font-weight: 400;
-        height: calc(var(--fontSize9) * 1.2);
+        @include font(var(--fontSize9), $color: var(--errorColor));
     }
 }
 
@@ -219,8 +197,7 @@ form {
     display: flex;
     margin-top: 16px;
     cursor: pointer;
-    font-weight: 400;
-    font-size: var(--fontSize9);
+    @include font(var(--fontSize9));
     align-items: center;
 
     >input {
@@ -272,9 +249,7 @@ input[type="submit"] {
     padding: 15px 30px 15px 30px;
     width: 253px;
     height: 58px;
-    color: white;
-    font-weight: 400;
-    font-size: var(--fontSize7);
+    @include font(var(--fontSize7));
     cursor: pointer;
     transition: all ease-in-out 125ms;
 

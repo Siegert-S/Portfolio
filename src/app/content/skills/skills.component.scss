@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 .skills-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,9 +35,7 @@
             height: calc(var(--fontSize1) * 1.2);
 
             h2 {
-                font-size: var(--fontSize1);
-                font-weight: 700;
-                line-height: calc(var(--fontSize1) * 1.2);
+                @include font(var(--fontSize1), 700);
                 text-align: end;
                 margin: 0;
                 padding: 0;
@@ -56,9 +56,7 @@
             span {
                 display: block;
                 width: 510px;
-                font-size: var(--fontSize8);
-                font-weight: 400;
-                line-height: calc(var(--fontSize8) * 1.2);
+                @include font(var(--fontSize8));
                 text-align: end;
             }
         }
@@ -79,10 +77,8 @@
             justify-self: end;
 
             >:nth-child(1) {
-                font-size: var(--fontSize5);
-                font-weight: 700;
+                @include font(var(--fontSize5), 700);
                 text-align: end;
-                line-height: 39px;
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
@@ -90,8 +86,7 @@
             }
 
             >:nth-child(2) {
-                font-size: var(--fontSize8);
-                font-weight: 400;
+                @include font(var(--fontSize8));
                 text-align: end;
             }
         }
@@ -109,10 +104,8 @@ button {
     height: 60px;
     border-radius: 10px;
     border: none;
-    font-size: var(--fontSize7);
-    font-weight: 400;
+    @include font(var(--fontSize7));
     text-align: center;
-    color: white;
     justify-self: end;
     margin-top: 20px;
     transition: all ease-in-out 100ms;

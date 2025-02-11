@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 .about-wrapper {
     display: flex;
     justify-content: end;
@@ -15,15 +17,12 @@
     margin-left: 7%;
 
     h2 {
-        font-size: var(--fontSize1);
-        font-weight: 700;
-        line-height: 108px;
+        @include font(var(--fontSize1), 700);
         margin: 0;
     }
 
     >div {
-        font-size: var(--fontSize8);
-        font-weight: 400;
+        @include font(var(--fontSize8));
 
         >div {
             display: flex;

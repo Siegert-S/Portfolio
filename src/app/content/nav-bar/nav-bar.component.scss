@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 nav {
     position: fixed;
     top: 0;
@@ -22,7 +24,6 @@ nav {
 .link-wrapper {
     display: flex;
     gap: 29px;
-
     transition: all ease-in-out 100ms;
 
     a {
@@ -37,15 +38,12 @@ nav {
 }
 
 .name {
-    font-size: var(--fontSize6);
-    font-weight: 700;
+    @include font(var(--fontSize6), 700);
 }
 
 a {
-    color: white;
+    @include font(var(--fontSize7));
     text-decoration: none;
-    font-size: var(--fontSize7);
-    font-weight: 400;
 
     cursor: pointer;
 }
@@ -78,7 +76,7 @@ a {
         width: 250px;
         transform: translateX(100%);
 
-        top: 86px;
+        top: 70px;
         background-color: var(--menuBgColor);
         padding: 24px;
         z-index: 1;

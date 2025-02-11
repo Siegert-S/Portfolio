@@ -1,3 +1,5 @@
+@use '../../../../styles.scss' as *;
+
 .icon-wrapper {
     display: flex;
     align-items: center;
@@ -17,8 +19,9 @@
     }
 
     div {
-        font-size: var(--fontSize8);
-        font-weight: 700;
+        @include font(var(--fontSize8), 700);
+        // font-size: var(--fontSize8);
+        // font-weight: 700;
         max-width: 88px;
         text-align: center;
 

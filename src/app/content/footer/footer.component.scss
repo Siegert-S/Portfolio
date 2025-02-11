@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 .footer-wrapper {
     background-color: var(--bgColor);
     border-top: 4px solid var(--secondayrColor);
@@ -13,18 +15,13 @@
         flex-direction: column;
 
         >span {
-            font-size: var(--fontSize4);
-            font-weight: 700;
-            line-height: 48px;
+            @include font(var(--fontSize4));
         }
 
         >div {
             >a {
-                color: white;
+                @include font(var(--fontSize8));
                 text-decoration: none;
-                font-size: var(--fontSize8);
-                font-weight: 400;
-                line-height: 19px;
             }
 
             >div.vektor {
@@ -44,9 +41,7 @@
     }
 
     >:nth-child(2) {
-        font-size: var(--fontSize7);
-        font-weight: 400;
-        line-height: 27px;
+        @include font(var(--fontSize7));
     }
 
     >:nth-child(3) {
@@ -81,11 +76,8 @@
         display: none;
 
         >a {
-            color: white;
+            @include font(var(--fontSize8));
             text-decoration: none;
-            font-size: var(--fontSize8);
-            font-weight: 400;
-            line-height: 19px;
         }
 
         >div.vektor {
@@ -118,7 +110,7 @@
         }
 
         >:nth-child(2) {
-            font-size: var(--fontSize5);
+            @include font(var(--fontSize5));
             margin-bottom: 23px;
         }
 

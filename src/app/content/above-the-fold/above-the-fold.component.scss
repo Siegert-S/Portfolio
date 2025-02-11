@@ -1,3 +1,5 @@
+@use '../../../styles.scss' as *;
+
 .atf {
     display: flex;
     justify-content: start;
@@ -102,11 +104,8 @@
 
                 a:last-child {
                     width: auto;
-                    color: white;
                     text-decoration: none;
-                    font-size: var(--fontSize7);
-                    font-weight: 400;
-                    line-height: 28px;
+                    @include font(var(--fontSize7));
                 }
             }
         }
@@ -126,9 +125,7 @@
                     position: absolute;
                     top: calc(var(--fontSize2) * 0.9);
                     left: calc(var(--fontSize2) * -0.6);
-                    font-size: var(--fontSize2);
-                    font-weight: 400;
-                    line-height: calc(var(--fontSize2) * 1.2);
+                    @include font(var(--fontSize2));
                     height: var(--fontSize2);
                     width: calc(var(--fontSize3) + var(--fontSize1));
                     padding: 0;
@@ -140,17 +137,12 @@
                     margin-left: calc(var(--fontSize2) * 1.2);
 
                     >div:nth-child(1) {
-                        font-size: var(--fontSize1);
-                        font-weight: 700;
-                        line-height: calc(var(--fontSize1) * 1.2);
+                        @include font(var(--fontSize1), 700);
                         white-space: nowrap;
                     }
 
                     >div:nth-child(2) {
-                        font-size: var(--fontSize3);
-                        font-weight: 400;
-                        line-height: calc(var(--fontSize3) * 1.2);
-                        color: var(--primaryColor);
+                        @include font(var(--fontSize3), $color: var(--primaryColor));
                         white-space: nowrap;
                     }
                 }
@@ -163,10 +155,8 @@
                 height: 60px;
                 border-radius: 10px;
                 border: none;
-                font-size: var(--fontSize7);
-                font-weight: 400;
+                @include font(var(--fontSize7));
                 text-align: center;
-                color: white;
                 transition: all ease-in-out 100ms;
                 margin-top: 16px;
 
@@ -187,7 +177,6 @@
 }
 
 
-//respons settings **************************************************************
 @media (max-width: 1160px) {
     .atf {
 
@@ -226,16 +215,11 @@
                         display: none;
                     }
                 }
-
             }
 
             >div:nth-child(4) {
-                // background-color: rgb(131, 16, 16);
                 position: relative;
-
             }
-
-
         }
     }
 }
