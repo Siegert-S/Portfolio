@@ -106,7 +106,6 @@
                     text-decoration: none;
                     font-size: var(--fontSize7);
                     font-weight: 400;
-                    line-height: 28px;
                 }
             }
         }
@@ -128,7 +127,6 @@
                     left: calc(var(--fontSize2) * -0.6);
                     font-size: var(--fontSize2);
                     font-weight: 400;
-                    line-height: calc(var(--fontSize2) * 1.2);
                     height: var(--fontSize2);
                     width: calc(var(--fontSize3) + var(--fontSize1));
                     padding: 0;
@@ -142,14 +140,12 @@
                     >div:nth-child(1) {
                         font-size: var(--fontSize1);
                         font-weight: 700;
-                        line-height: calc(var(--fontSize1) * 1.2);
                         white-space: nowrap;
                     }
 
                     >div:nth-child(2) {
                         font-size: var(--fontSize3);
                         font-weight: 400;
-                        line-height: calc(var(--fontSize3) * 1.2);
                         color: var(--primaryColor);
                         white-space: nowrap;
                     }

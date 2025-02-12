@@ -1,13 +1,13 @@
 <div id="contact" class="contact-wrapper">
     <div>
-        <div></div>
-        <h2>Contact</h2>
-        <div></div>
+        <div class="titel-line"></div>
+        <h2 class="titel">Contact</h2>
+        <div class="spacer"></div>
     </div>
     <div>
-        <div>
+        <div class="haedline">
             <p>Got a problem to solve?</p>
-            <div>
+            <div class="text-frame">
                 <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and
                     contributing to your projects with my work.</span>
                 <span>Need a Frontend developer? Contact me!</span>
@@ -58,8 +58,7 @@
                             class="error-message">Please
                             accept the privacy policy</span>}
                     </div>
-                    <div>
-                        <!-- <input type="submit" [disabled]="form.invalid" value="Send message :)"> -->
+                    <div class="submit-btn-frame">
                         <input type="submit" [ngClass]="(form.valid) ? 'enable':'disable'" value="Send message :)">
                     </div>
                 </div>
@@ -67,6 +66,6 @@
         </form>
     </div>
     <div>
-        <a href="#top"></a>
+        <a class="scroll-up-bnt" href="#top"></a>
     </div>
 </div>
