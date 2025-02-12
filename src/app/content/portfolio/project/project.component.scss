@@ -43,7 +43,6 @@
 
             >:nth-child(2) {
                 color: var(--secondayrColor);
-                font-weight: 400;
                 font-size: var(--fontSize7);
                 margin: 15px 0px 15px 0px;
 
@@ -66,7 +65,6 @@
                 justify-content: center;
                 align-items: center;
                 box-sizing: border-box;
-                color: white;
                 width: auto;
                 max-width: 160px;
                 height: 58px;
@@ -74,7 +72,6 @@
                 border-radius: 10px;
                 padding: 15px 30px 15px 30px;
                 font-size: var(--fontSize7);
-                font-weight: 400;
                 text-decoration: none;
             }
 

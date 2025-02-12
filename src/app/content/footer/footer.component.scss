@@ -19,10 +19,8 @@
 
         >div {
             >a {
-                color: white;
                 text-decoration: none;
                 font-size: var(--fontSize8);
-                font-weight: 400;
             }
 
             >div.vektor {
@@ -43,7 +41,6 @@
 
     >:nth-child(2) {
         font-size: var(--fontSize7);
-        font-weight: 400;
     }
 
     >:nth-child(3) {
@@ -78,10 +75,8 @@
         display: none;
 
         >a {
-            color: white;
             text-decoration: none;
             font-size: var(--fontSize8);
-            font-weight: 400;
         }
 
         >div.vektor {

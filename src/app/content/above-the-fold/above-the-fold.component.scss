@@ -102,10 +102,8 @@
 
                 a:last-child {
                     width: auto;
-                    color: white;
                     text-decoration: none;
                     font-size: var(--fontSize7);
-                    font-weight: 400;
                 }
             }
         }
@@ -126,7 +124,6 @@
                     top: calc(var(--fontSize2) * 0.9);
                     left: calc(var(--fontSize2) * -0.6);
                     font-size: var(--fontSize2);
-                    font-weight: 400;
                     height: var(--fontSize2);
                     width: calc(var(--fontSize3) + var(--fontSize1));
                     padding: 0;
@@ -145,7 +142,6 @@
 
                     >div:nth-child(2) {
                         font-size: var(--fontSize3);
-                        font-weight: 400;
                         color: var(--primaryColor);
                         white-space: nowrap;
                     }
@@ -160,9 +156,7 @@
                 border-radius: 10px;
                 border: none;
                 font-size: var(--fontSize7);
-                font-weight: 400;
                 text-align: center;
-                color: white;
                 transition: all ease-in-out 100ms;
                 margin-top: 16px;
 

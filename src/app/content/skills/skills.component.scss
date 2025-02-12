@@ -56,7 +56,6 @@
                 display: block;
                 width: 510px;
                 font-size: var(--fontSize8);
-                font-weight: 400;
                 text-align: end;
             }
         }
@@ -88,7 +87,6 @@
 
             >:nth-child(2) {
                 font-size: var(--fontSize8);
-                font-weight: 400;
                 text-align: end;
             }
         }
@@ -107,9 +105,7 @@ button {
     border-radius: 10px;
     border: none;
     font-size: var(--fontSize7);
-    font-weight: 400;
     text-align: center;
-    color: white;
     justify-self: end;
     margin-top: 20px;
     transition: all ease-in-out 100ms;
