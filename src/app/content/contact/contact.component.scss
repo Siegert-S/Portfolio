@@ -8,6 +8,8 @@
     align-items: center;
     flex-direction: column;
     padding-top: 12vh;
+    position: relative;
+    z-index: 2;
 
     >:nth-child(1) {
         display: flex;

@@ -1,0 +1,23 @@
+<div class="reference-wrapper">
+    <div>
+        <div class="img-frame">
+            <div class="img-vektor" style="visibility: hidden;"></div>
+            <img src="{{referencList[indexCount].img}}" alt="">
+            <div class="img-vektor"></div>
+        </div>
+        <div class="text-frame">
+            <div class="text"><span>{{referencList[indexCount].text}}</span></div>
+            <div>
+                <div class="vektor"></div>
+                <div>{{referencList[indexCount].name}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="control-frame">
+        <div class="bnt last" (click)="showNextReferenc(false)"></div>
+        <div class="dot" [ngClass]="{'activ':indexCount==0}"></div>
+        <div class="dot" [ngClass]="{'activ':indexCount==1}"></div>
+        <div class="dot" [ngClass]="{'activ':indexCount==2}"></div>
+        <div class="bnt next" (click)="showNextReferenc(true)"></div>
+    </div>
+</div>

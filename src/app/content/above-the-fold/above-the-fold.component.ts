@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AboveTheFoldComponent {
 
-  email: string = 's.siegert85@googlemail.com';
+  email: string = 'Kontakt@SaschaSiegert.de';
+  subject: string = '?subject=Interessiert%20an%20Zusammenarbeit';
 
 
   scrollToContact() {

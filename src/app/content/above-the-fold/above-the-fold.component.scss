@@ -4,9 +4,11 @@
     align-items: start;
     height: 100vh;
     box-sizing: border-box;
-    overflow: hidden;
+    // overflow: hidden;
+    // overflow-x: hidden;
     padding-top: 15vh;
     padding-bottom: 5vh;
+    position: relative;
 
     >div {
         display: flex;
@@ -176,6 +178,12 @@
     }
 }
 
+.shadow{
+    position: absolute !important;
+    z-index: 0;
+    right: -100%;
+    top: 780px;
+}
 
 //respons settings **************************************************************
 @media (max-width: 1160px) {

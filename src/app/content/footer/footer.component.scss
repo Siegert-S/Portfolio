@@ -7,6 +7,8 @@
     margin-top: 20px;
     width: 100%;
     padding: 66px 0 70px 0;
+    position: relative;
+    z-index: 2;
 
     >:nth-child(1) {
         display: flex;

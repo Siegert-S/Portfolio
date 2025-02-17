@@ -30,7 +30,7 @@ export class ContactComponent {
   }
 
   post = {
-    endPoint: 'https://saschasiegert.de/sendMail.php',
+    endPoint: 'http://saschasiegert.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -43,21 +43,16 @@ export class ContactComponent {
   onSubmit() {
     this.submitAttempt = true;
     if (this.form.valid) {
-      console.log(this.form.value);
-
       this.http.post(this.post.endPoint, this.post.body(this.form.value))
         .subscribe({
           next: (response) => {
-            console.log(response);
-
             this.form.reset();
           },
           error: (error) => {
-            console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+          },
         });
-
       this.form.reset();
       this.submitAttempt = false;
     }

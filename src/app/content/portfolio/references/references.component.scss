@@ -1,0 +1,130 @@
+.reference-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    >:first-child {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.text-frame {
+    border: 4px solid var(--secondayrColor);
+    border-radius: 32px;
+    padding: 48px 10%;
+    background-color: var(--bgColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10%;
+    font-size: var(--fontSize7);
+    min-height: 272px;
+    // font-family: monospace;
+
+    >:last-child {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+
+        :last-child {
+            white-space: nowrap;
+            margin-left: 10px;
+            font-size: var(--fontSize8);
+        }
+    }
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.img-vektor,
+.vektor {
+    border: 2px solid var(--primaryColor);
+    width: 100%;
+    height: 0px;
+}
+
+.img-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex-direction: row-reverse;
+    min-width: 35%;
+
+    img {
+        border: 4px solid var(--primaryColor);
+        border-radius: 50%;
+        width: 272px;
+        height: 272px;
+    }
+}
+
+.control-frame {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.bnt {
+    cursor: pointer;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 40px;
+    aspect-ratio: 1/1;
+
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+}
+
+.last {
+    background-image: url('../../../../assets/img/arrow_back.svg');
+
+    &:hover {
+        border-color: var(--secondayrColor);
+    }
+}
+
+.next {
+    background-image: url('../../../../assets/img/arrow_forward.svg');
+
+    &:hover {
+        border-color: var(--secondayrColor);
+    }
+}
+
+.dot {
+    background-color: var(--secondayrColor);
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 0px 20px;
+}
+
+.activ {
+    background-color: var(--primaryColor);
+}
+
+@media (max-width:1100px) {
+    .reference-wrapper {
+        >:first-child {
+            flex-direction: column;
+        }
+    }
+
+    .text-frame {
+        margin-right: 10%;
+        margin-top: 25px;
+    }
+}

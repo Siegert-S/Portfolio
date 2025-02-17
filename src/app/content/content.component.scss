@@ -16,6 +16,7 @@
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
     // background-color: aqua;
 
     // img:nth-child(2) {
@@ -64,3 +65,43 @@
     // }
 }
 
+.shadow-about {
+    position: absolute;
+    z-index: 1;
+    top: 15%;
+    right: -360px;
+}
+
+.shadow-skills {
+    position: absolute;
+    z-index: 1;
+    top: 34%;
+    left: -560px;
+    // right: -360px;
+}
+
+.shadow-portfolio {
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: -390px;
+
+}
+
+.shadow-portfolio-right {
+    position: absolute;
+    z-index: 1;
+    top: 70%;
+    right: -510px;
+    rotate: 180deg;
+
+}
+
+.shadow-contact {
+    position: absolute;
+    z-index: 1;
+    // top: 57%;
+    left: -500px;
+    bottom: -4%;
+
+}

@@ -6,6 +6,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .text-wrapper {
@@ -76,6 +77,8 @@
         }
     }
 }
+
+
 
 @media (max-width:1100px) {
     .about-wrapper {

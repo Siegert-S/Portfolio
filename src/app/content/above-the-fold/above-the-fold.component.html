@@ -13,9 +13,14 @@
         <div>
             <div></div>
             <div>
-                <a href="https://github.com/Siegert-S" target="_blank" rel="noopener noreferrer"><img src="../../../assets/img/github.svg" alt=""></a>
-                <a href=""><img src="../../../assets/img/email.svg" alt=""></a>
-                <a href=""><img src="../../../assets/img/linkedin.svg" alt=""></a>
+                <a href="https://github.com/Siegert-S" target="_blank" rel="noopener noreferrer">
+                    <img src="../../../assets/img/github.svg" alt=""></a>
+
+                <a [href]="'mailto:' + email + subject"><img src="../../../assets/img/email.svg" alt=""></a>
+
+                <a href="https://www.linkedin.com/in/sascha-siegert-092822350" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="../../../assets/img/linkedin.svg" alt=""></a>
 
                 <a href="#contact">{{email}}</a>
 
@@ -33,4 +38,5 @@
         </div>
 
     </div>
+    <!-- <div class="shadow"><img src="../../../assets/img/30. Purple shadow about me.svg" alt=""></div> -->
 </div>

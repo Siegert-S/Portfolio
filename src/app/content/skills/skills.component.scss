@@ -1,11 +1,13 @@
 .skills-wrapper {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     box-sizing: border-box;
     padding-top: 15vh;
     width: 100%;
     column-gap: 7%;
+    z-index: 2;
 
     >:nth-child(1) {
         grid-column: 1;
@@ -96,6 +98,13 @@
 .contact-bnt {
     justify-self: center;
     align-self: center;
+}
+
+.bnt-frame{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 60px;
 }
 
 button {
