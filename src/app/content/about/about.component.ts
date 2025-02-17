@@ -10,8 +10,12 @@ import { Component } from '@angular/core';
 export class AboutComponent {
 
 
-  textCommute: string = 'Flexible in terms of working environments, I can work effectively both on-site in Cologne and remotely';
+  // textCommute: string = 'Flexible in terms of working environments, I can work effectively both on-site in Cologne and remotely';
+  textCommute: string = `Flexible in terms of working environments, I can work effectively on-site in Cologne. With a valid drivers license
+   and my own car, I am also able to commute easily, ensuring a high level of mobility and availability.`;
+
   textMantality: string = 'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.';
+
   textProfession: string = `In my profession, programming isn\'t just about writing code;
                             it\'s a creative form of problem-solving. 
                             I take pride in my ability to distill complex technical challenges into simple,
