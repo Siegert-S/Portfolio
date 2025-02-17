@@ -37,7 +37,7 @@ export class PortfolioComponent {
     {
       name: 'Join',
       imgUrl: '../../../assets/img/picture_pc_join.svg',
-      webUrl: 'http://www.saschasiegert.de',
+      webUrl: 'http://www.join.saschasiegert.de/html/login.html',
       gitUrl: 'https://github.com/Siegert-S/join',
       skills: ['HTML', 'CSS', 'Java Script', 'Firebase'],
       text: 'A task manager inspired by the Kanban system, allowing you to create and organize tasks through drag-and-drop functionality, and assign users and categories.',

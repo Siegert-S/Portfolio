@@ -12,5 +12,4 @@ export class ProjectComponent {
   @Input() project = { name: 'test', imgUrl: 'test', webUrl: '', gitUrl: '', skills: [''], text: 'auch test', };
   @Input() flip = 0;
 
-  test = '../../../../assets/img/angular.svg  ../../../../assets/img/html.svg';
 }

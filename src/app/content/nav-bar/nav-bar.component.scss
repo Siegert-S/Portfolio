@@ -22,7 +22,6 @@ nav {
 .link-wrapper {
     display: flex;
     gap: 29px;
-
     transition: all ease-in-out 100ms;
 
     a {
@@ -44,7 +43,6 @@ nav {
 a {
     text-decoration: none;
     font-size: var(--fontSize7);
-
     cursor: pointer;
 }
 
@@ -75,7 +73,6 @@ a {
         right: 0px;
         width: 250px;
         transform: translateX(100%);
-
         top: 86px;
         background-color: var(--menuBgColor);
         padding: 24px;
@@ -113,7 +110,6 @@ a {
         padding-bottom: 86px;
         z-index: 1;
         box-sizing: border-box;
-
         transform: translateX(100%);
 
         >:nth-child(4) {

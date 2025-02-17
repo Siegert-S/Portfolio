@@ -38,7 +38,6 @@
 html,
 body {
   background-color: var(--bgColor);
-  // background-color: maroon;
   margin: 0;
   padding: 0 0 0 0;
   display: flex;
@@ -53,8 +52,6 @@ app-root {
   display: block;
   max-width: 1440px;
   width: 100%;
-  // background-color: red;
-  // background-color: transparentize($color: #000000, $amount: 1);
 }
 
 ::-webkit-scrollbar {

@@ -17,52 +17,6 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    // background-color: aqua;
-
-    // img:nth-child(2) {
-    //     width: 572px;
-    //     height: 608px;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 750px;
-    // }
-
-    // img:nth-child(3) {
-    //     width: 430px;
-    //     height: 950px;
-    //     position: absolute;
-    //     left: 0;
-    //     top: 2980px;
-    //     visibility: hidden;
-
-    // }
-
-    // img:nth-child(4) {
-    //     width: 640px;
-    //     height: 750px;
-    //     position: absolute;
-    //     // right: 0;
-    //     top: 3350px;
-    //     visibility: hidden;
-    // }
-
-    // img:nth-child(5) {
-    //     width: 430px;
-    //     height: 950px;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 4490px;
-    //     z-index: 0;
-    // }
-
-    // img:nth-child(6) {
-    //     width: 750px;
-    //     height: 900px;
-    //     position: absolute;
-    //     // right: 0;
-    //     top: 6450px;
-    //     z-index: 0;
-    // }
 }
 
 .shadow-about {
@@ -77,7 +31,6 @@
     z-index: 1;
     top: 34%;
     left: -560px;
-    // right: -360px;
 }
 
 .shadow-portfolio {
@@ -85,7 +38,6 @@
     z-index: 1;
     top: 60%;
     left: -390px;
-
 }
 
 .shadow-portfolio-right {
@@ -94,14 +46,11 @@
     top: 70%;
     right: -510px;
     rotate: 180deg;
-
 }
 
 .shadow-contact {
     position: absolute;
     z-index: 1;
-    // top: 57%;
     left: -500px;
     bottom: -4%;
-
 }

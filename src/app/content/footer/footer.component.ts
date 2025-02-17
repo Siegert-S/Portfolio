@@ -9,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  email: string = 'Kontakt@SaschaSiegert.de';
+  subject: string = '?subject=Interessiert%20an%20Zusammenarbeit';
 }
