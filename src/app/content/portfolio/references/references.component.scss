@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 5vh;
 
     >:first-child {
         display: flex;
@@ -24,6 +25,7 @@
     margin-left: 10%;
     font-size: var(--fontSize7);
     min-height: 272px;
+    width: 55%;
     // font-family: monospace;
 
     >:last-child {
@@ -126,5 +128,6 @@
     .text-frame {
         margin-right: 10%;
         margin-top: 25px;
+        width: auto;
     }
 }

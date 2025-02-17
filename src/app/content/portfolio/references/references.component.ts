@@ -12,17 +12,17 @@ export class ReferencesComponent {
 
   referencList = [
     {
-      img: '../../../../assets/img/picture01_cut_small.png',
-      name: 'Tester vom testing Team',
-      text: 'text zum testen des textfeld und ich muss auch noch ein bild raussuchen!'
+      img: '../../../../assets/img/user-icon.png',
+      name: 'Name',
+      text: 'referenctext 1'
     }, {
-      img: '',
-      name: 'Tester',
-      text: 'text zum testen des textfeld und ich muss auch noch ein bild raussuchen!'
+      img: '../../../../assets/img/user-icon.png',
+      name: 'Name',
+      text: 'referenctext 2'
     }, {
-      img: '',
-      name: 'Tester 3',
-      text: 'text zum testen des textfeld '
+      img: '../../../../assets/img/user-icon.png',
+      name: 'Name',
+      text: 'referenctext 3'
     },
   ];
 
