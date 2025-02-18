@@ -1,5 +1,4 @@
 * {
-    box-sizing: border-box;
     font-size: var(--fontSize8);
 }
 
@@ -10,6 +9,8 @@
     padding-top: 12vh;
     position: relative;
     z-index: 2;
+    overflow-y: hidden;
+    padding-bottom: 20px;
 
     >:nth-child(1) {
         display: flex;
@@ -126,6 +127,7 @@ form {
         background-color: var(--bgColor);
         outline: none;
         width: 100%;
+        font-family: 'Poppins';
     }
 
     &:has(textarea) {
@@ -248,6 +250,13 @@ input[type="submit"] {
             background-color: var(--disableColor);
         }
     }
+}
+
+.shadow-contact {
+    position: absolute;
+    z-index: 1;
+    left: -500px;
+    bottom: -45%;
 }
 
 @media (max-width: 1299px) {

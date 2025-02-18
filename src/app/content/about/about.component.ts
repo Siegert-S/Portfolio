@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../service/language.service';
 
 @Component({
   selector: 'app-about',
@@ -8,16 +9,27 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
+  private languageService = inject(LanguageService);
 
+  get title(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].about.title!;
+  }
 
-  // textCommute: string = 'Flexible in terms of working environments, I can work effectively both on-site in Cologne and remotely';
-  textCommute: string = `Flexible in terms of working environments, I can work effectively on-site in Cologne. With a valid drivers license
-   and my own car, I am also able to commute easily, ensuring a high level of mobility and availability.`;
+  get intro(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].about.introText!;
+  }
 
-  textMantality: string = 'I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.';
+  get textCommute(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].about.commuteText!;
+  }
 
-  textProfession: string = `In my profession, programming isn\'t just about writing code;
-                            it\'s a creative form of problem-solving. 
-                            I take pride in my ability to distill complex technical challenges into simple,
-                            user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.`;
+  get textMantality(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].about.mantalityText!;
+  }
+
+  get textProfession(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].about.professionText!;
+  }
+
+  constructor() { }
 }
