@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { ProjectService, Project } from '../../../service/project.service';
+import { LanguageService } from '../../../service/language.service';
 
 @Component({
   selector: 'app-project',
@@ -9,7 +11,13 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectComponent {
 
-  @Input() project = { name: 'test', imgUrl: 'test', webUrl: '', gitUrl: '', skills: [''], text: 'auch test', };
+  private languageService = inject(LanguageService);
+
+  get language() {
+    return this.languageService.selectedLanguage;
+  }
+
+  @Input() project!: Project;
   @Input() flip = 0;
 
 }

@@ -159,7 +159,7 @@ export class LanguageService {
                         benutzerfreundliche Lösungen zu verwandeln und so Ihre Ziele zu verwirklichen.`,
       },
       skills: {
-        title: 'Meine Fähigkeiten',
+        title: 'Meine Skills',
         introText: `Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen 
                     Frontend-Technologien und Konzepten gesammelt.`,
         questionFron: 'Suchen Sie',

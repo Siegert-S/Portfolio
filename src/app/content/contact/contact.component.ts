@@ -72,10 +72,7 @@ export class ContactComponent {
     }
   );
 
-  constructor() {
-    console.log(this.contactIntro);
-
-  }
+  constructor() { }
 
   post = {
     endPoint: 'https://saschasiegert.de/sendMail.php',
