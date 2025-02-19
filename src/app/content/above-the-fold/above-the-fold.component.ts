@@ -12,13 +12,10 @@ export class AboveTheFoldComponent {
 
   private languageService = inject(LanguageService);
 
-  // email: string = 'Kontakt@SaschaSiegert.de';
-  // subject: string = '?subject=Interessiert%20an%20Zusammenarbeit';
-
   get hint(): string {
     return this.languageService.language[this.languageService.selectedLanguage].aboveTheFold.hint!;
   }
-  
+
   get email(): string {
     return this.languageService.language[this.languageService.selectedLanguage].aboveTheFold.email!;
   }

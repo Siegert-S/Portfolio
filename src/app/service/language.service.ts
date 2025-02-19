@@ -15,6 +15,22 @@ interface TextObject {
   'headline1'?: string;
   'headline2'?: string;
   'headline3'?: string;
+  'contactHeading'?: string;
+  'contactIntro'?: string;
+  'contactDetails'?: string;
+  'contactCTA'?: string;
+  'namePlaceholder'?: string;
+  'nameError'?: string;
+  'emailPlaceholder'?: string;
+  'emailError'?: string;
+  'messagePlaceholder'?: string;
+  'messageError'?: string;
+  'priPolicyFront'?: string;
+  'priPolicy'?: string;
+  'priPolicyBack'?: string;
+  'priPolicyError'?: string;
+  // ''?: string;
+  // ''?: string;
   // ''?: string;
   // ''?: string;
   // ''?: string;
@@ -77,7 +93,21 @@ export class LanguageService {
         title: '',
       },
       contact: {
-        title: '',
+        title: 'Contact',
+        contactHeading: `Got a problem to solve?`,
+        contactIntro: `Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.`,
+        contactCTA: `Need a Frontend developer? Contact me!`,
+        namePlaceholder: `Your name`,
+        nameError: `Your name is required`,
+        emailPlaceholder: `Your email`,
+        emailError: `Your email is required`,
+        messagePlaceholder: `Your message`,
+        messageError: `Your message is empty`,
+        priPolicyFront: ` I've read the `,
+        priPolicy: `privacy policy`,
+        priPolicyBack: `and agree to the processing of my data as  outlined.`,
+        priPolicyError: `Please  accept the privacy policy`,
+        button: `Send message :)`,
       },
       footer: {
         title: '',

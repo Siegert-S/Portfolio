@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Component, inject, } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { LanguageService } from '../../service/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,10 +13,56 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 })
 export class ContactComponent {
 
+  private languageService = inject(LanguageService);
+
+  get title(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.title!;
+  }
+  get contactHeading(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.contactHeading!;
+  }
+  get contactIntro(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.contactIntro!;
+  }
+  get contactCTA(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.contactCTA!;
+  }
+  get namePlaceholder(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.namePlaceholder!;
+  }
+  get nameError(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.nameError!;
+  }
+  get emailPlaceholder(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.emailPlaceholder!;
+  }
+  get emailError(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.emailError!;
+  }
+  get messagePlaceholder(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.messagePlaceholder!;
+  }
+  get messageError(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.messageError!;
+  }
+  get priPolicyFront(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicyFront!;
+  }
+  get priPolicy(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicy!;
+  }
+  get priPolicyBack(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicyBack!;
+  }
+  get priPolicyError(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicyError!;
+  }
+  get bnt(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.button!;
+  }
+
   http = inject(HttpClient);
-
   submitAttempt = false;
-
   form = new FormGroup(
     {
       name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z\\d\\s]+$')]),
@@ -26,6 +73,7 @@ export class ContactComponent {
   );
 
   constructor() {
+console.log(this.contactIntro);
 
   }
 

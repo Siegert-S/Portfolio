@@ -1,47 +1,46 @@
 <div id="contact" class="contact-wrapper">
     <div>
         <div class="titel-line"></div>
-        <h2 class="titel">Contact</h2>
+        <h2 class="titel">{{title}}</h2>
         <div class="spacer"></div>
     </div>
     <div>
         <div class="haedline">
-            <p>Got a problem to solve?</p>
+            <p>{{contactHeading}}</p>
             <div class="text-frame">
-                <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and
-                    contributing to your projects with my work.</span>
-                <span>Need a Frontend developer? Contact me!</span>
+                <span>{{contactIntro}}</span>
+                <span>{{contactCTA}}</span>
             </div>
         </div>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div>
                 <label class="field-style" [class.invalid]="invalidityCheck('name')"
                     [class.valid]="validityCheck('name')">
-                    <input formControlName="name" type="text" required placeholder="Your name">
+                    <input formControlName="name" type="text" required placeholder="{{namePlaceholder}}">
                     @if (invalidityCheck('name')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('name')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>
-                @if (invalidityCheck('name')) {<span class="error-message">Your name is required</span>}
+                @if (invalidityCheck('name')) {<span class="error-message">{{nameError}}</span>}
 
             </div>
             <div>
                 <label class="field-style" [class.invalid]="invalidityCheck('email')"
                     [class.valid]="validityCheck('email')">
-                    <input formControlName="email" type="email" required placeholder="Your email">
+                    <input formControlName="email" type="email" required placeholder="{{emailPlaceholder}}">
                     @if (invalidityCheck('email')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('email')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>
-                @if (invalidityCheck('email')) {<span class="error-message">Your email is required</span>}
+                @if (invalidityCheck('email')) {<span class="error-message">{{emailError}}</span>}
             </div>
             <div>
                 <div>
                     <label class="field-style" [class.invalid]="invalidityCheck('message')"
                         [class.valid]="validityCheck('message')">
-                        <textarea formControlName="message" placeholder="Your message"></textarea>
+                        <textarea formControlName="message" placeholder="{{messagePlaceholder}}"></textarea>
                         @if (invalidityCheck('message')) { <img src="../../../assets/img/warning.svg" alt=""> }
                         @if (validityCheck('message')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                     </label>
-                    @if (invalidityCheck('message')) {<span class="error-message">Your message is empty</span>}
+                    @if (invalidityCheck('message')) {<span class="error-message">{{messageError}}</span>}
                 </div>
 
                 <div>
@@ -50,18 +49,16 @@
                             <input formControlName="privacy" type="checkbox">
                             <div></div>
                             <span>
-                                I've read the <a href="http://xn--datenschutzerklrung-uwb.saschasiegert.de/"
+                                {{priPolicyFront}} <a href="http://xn--datenschutzerklrung-uwb.saschasiegert.de/"
                                     target="_blank" rel="noopener noreferrer">
-                                    privacy policy</a> and agree to the processing of my data as
-                                outlined.
+                                    {{priPolicy}}</a> {{priPolicyBack}}
                             </span>
                         </label>
                         @if (form.get('privacy')?.invalid && (form.get('privacy')?.dirty || submitAttempt)) {<span
-                            class="error-message">Please
-                            accept the privacy policy</span>}
+                            class="error-message">{{priPolicyError}}</span>}
                     </div>
                     <div class="submit-btn-frame">
-                        <input type="submit" [ngClass]="(form.valid) ? 'enable':'disable'" value="Send message :)">
+                        <input type="submit" [ngClass]="(form.valid) ? 'enable':'disable'" value="{{bnt}}">
                     </div>
                 </div>
             </div>
