@@ -14,15 +14,15 @@ export class ReferencesComponent {
     {
       img: '../../../../assets/img/user-icon.png',
       name: 'Name',
-      text: 'referenctext 1'
+      text: 'reference text 1'
     }, {
       img: '../../../../assets/img/user-icon.png',
       name: 'Name',
-      text: 'referenctext 2'
+      text: 'reference text 2'
     }, {
       img: '../../../../assets/img/user-icon.png',
       name: 'Name',
-      text: 'referenctext 3'
+      text: 'reference text 3'
     },
   ];
 

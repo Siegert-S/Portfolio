@@ -13,6 +13,8 @@
             </div>
         </div>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            @if (response && isSuccsesfull) { <div (click)="responsToUser()" class="user-response"> {{succses}} </div>}
+            @if (response && !isSuccsesfull) { <div (click)="responsToUser()" class="user-response failure"> {{failure}} </div>}
             <div>
                 <label class="field-style" [class.invalid]="invalidityCheck('name')"
                     [class.valid]="validityCheck('name')">
@@ -42,7 +44,6 @@
                     </label>
                     @if (invalidityCheck('message')) {<span class="error-message">{{messageError}}</span>}
                 </div>
-
                 <div>
                     <div>
                         <label class="checkbox-wrapper">

@@ -36,8 +36,8 @@ interface TextObject {
   'questionFron'?: string;
   'questionBack'?: string;
   'legal'?: string;
-  // ''?: string;
-  // ''?: string;
+  'confirmSubmit'?: string;
+  'errorSubmit'?: string;
   // ''?: string;
 }
 
@@ -122,6 +122,8 @@ export class LanguageService {
         priPolicyBack: `and agree to the processing of my data as  outlined.`,
         priPolicyError: `Please  accept the privacy policy`,
         button: `Send message :)`,
+        confirmSubmit:'Submit succesful!',
+        errorSubmit:'Failure please try again later!'
       },
       footer: {
         legal: 'Legal Notice',

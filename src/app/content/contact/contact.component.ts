@@ -60,9 +60,17 @@ export class ContactComponent {
   get bnt(): string {
     return this.languageService.language[this.languageService.selectedLanguage].contact.button!;
   }
+  get succses(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.confirmSubmit!;
+  }
+  get failure(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].contact.errorSubmit!;
+  }
 
   http = inject(HttpClient);
   submitAttempt = false;
+  response = false;
+  isSuccsesfull = true;
   form = new FormGroup(
     {
       name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z\\d\\s]+$')]),
@@ -91,12 +99,13 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.form.value))
         .subscribe({
           next: (response) => {
+            this.isSuccsesfull = true;
             this.form.reset();
           },
-          error: (error) => { },
-          complete: () => { },
+          error: (error) => { this.isSuccsesfull = false; },
+          complete: () => { this.responsToUser() },
         });
-      this.form.reset();
+      // this.form.reset();
       this.submitAttempt = false;
     }
   }
@@ -118,5 +127,9 @@ export class ContactComponent {
     if (!control) return false;
 
     return control.valid && control.touched;
+  }
+
+  responsToUser() {
+    this.response = !this.response;
   }
 }
