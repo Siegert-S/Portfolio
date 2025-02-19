@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ProjectComponent } from "./project/project.component";
 import { CommonModule } from '@angular/common';
 import { ReferencesComponent } from "./references/references.component";
+import { LanguageService } from '../../service/language.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,6 +13,14 @@ import { ReferencesComponent } from "./references/references.component";
 })
 export class PortfolioComponent {
 
+  private languageService = inject(LanguageService);
+
+  get title(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].portfolio.title!;
+  }
+  get introText(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].portfolio.introText!;
+  }
 
   projects = [
     {
@@ -19,7 +28,7 @@ export class PortfolioComponent {
       imgUrl: '../../../assets/img/picture_pc_knight-game.png',
       webUrl: 'http://knight-game.saschasiegert.de/',
       gitUrl: 'https://github.com/Siegert-S/knight-game',
-      skills: ['HTML', 'CSS', 'Java Script'],
+      skills: ['HTML', 'CSS', 'JavaScript'],
       text: ` A 2D action game where you control a knight navigating through levels
               filled with skeletons and the powerful black mage boss.
               Defeat enemies to earn gold coins, collect healing red coins, 
@@ -31,7 +40,7 @@ export class PortfolioComponent {
       imgUrl: '../../../assets/img/picture_pc_pokedex.png',
       webUrl: 'http://pokedex.saschasiegert.de/',
       gitUrl: 'https://github.com/Siegert-S/pokedex',
-      skills: ['HTML', 'CSS', 'Java Script', 'Api'],
+      skills: ['HTML', 'CSS', 'JavaScript', 'Api'],
       text: 'A simple library that catalogs and delivers Pokémon information, powered by the PokéAPI.',
     },
     {
@@ -39,7 +48,7 @@ export class PortfolioComponent {
       imgUrl: '../../../assets/img/picture_pc_join.svg',
       webUrl: 'http://www.join.saschasiegert.de/html/login.html',
       gitUrl: 'https://github.com/Siegert-S/join',
-      skills: ['HTML', 'CSS', 'Java Script', 'Firebase'],
+      skills: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       text: 'A task manager inspired by the Kanban system, allowing you to create and organize tasks through drag-and-drop functionality, and assign users and categories.',
     },
   ]
