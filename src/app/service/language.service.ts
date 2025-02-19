@@ -122,8 +122,8 @@ export class LanguageService {
         priPolicyBack: `and agree to the processing of my data as  outlined.`,
         priPolicyError: `Please  accept the privacy policy`,
         button: `Send message :)`,
-        confirmSubmit:'Submit succesful!',
-        errorSubmit:'Failure please try again later!'
+        confirmSubmit: 'Submit succesful!',
+        errorSubmit: 'Failure please try again later!'
       },
       footer: {
         legal: 'Legal Notice',
@@ -191,6 +191,8 @@ export class LanguageService {
         priPolicyBack: ' gelesen und stimme der Verarbeitung meiner Daten zu.',
         priPolicyError: 'Bitte akzeptieren Sie die Datenschutzerklärung',
         button: 'Nachricht senden :)',
+        confirmSubmit: 'Senden erfolgreich!',
+        errorSubmit: 'Fehler, bitte versuche es später noch einmal!',
       },
       footer: {
         legal: 'Impressum',
