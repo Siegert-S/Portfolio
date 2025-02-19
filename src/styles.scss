@@ -33,6 +33,10 @@
   color: white;
   font-weight: 400;
   box-sizing: border-box;
+
+  ::placeholder {
+    color: white;
+  }
 }
 
 html,
