@@ -16,9 +16,8 @@ interface TextObject {
   'headline2'?: string;
   'headline3'?: string;
   'contactHeading'?: string;
-  'contactIntro'?: string;
   'contactDetails'?: string;
-  'contactCTA'?: string;
+  'callToAction'?: string;
   'namePlaceholder'?: string;
   'nameError'?: string;
   'emailPlaceholder'?: string;
@@ -29,8 +28,13 @@ interface TextObject {
   'priPolicy'?: string;
   'priPolicyBack'?: string;
   'priPolicyError'?: string;
-  // ''?: string;
-  // ''?: string;
+  'about'?: string;
+  'skills'?: string;
+  'portfolio'?: string;
+  'contact'?: string;
+  'language'?: string;
+  'questionFron'?: string;
+  'questionBack'?: string;
   // ''?: string;
   // ''?: string;
   // ''?: string;
@@ -62,7 +66,11 @@ export class LanguageService {
   language: Language = {
     en: {
       navBar: {
-        title: '',
+        about: 'About me',
+        skills: 'Skills',
+        portfolio: 'Portfolio',
+        contact: 'Contact',
+        language: 'Language',
       },
       aboveTheFold: {
         hint: 'scroll down',
@@ -87,7 +95,12 @@ export class LanguageService {
                         user-friendly solutions. This way, I help you achieve your goals and bring your visions to life.`,
       },
       skills: {
-        title: '',
+        title: 'My skills',
+        introText: `I have gained experience in building projects with different frontend technologies and concepts.`,
+        questionFron: `Looking for`,
+        questionBack: `anoterher skill`,
+        callToAction: `Feel free to contact me. I look forward to expanding on my previous knowledge`,
+        button: `Get in touch`,
       },
       portfolio: {
         title: '',
@@ -95,8 +108,8 @@ export class LanguageService {
       contact: {
         title: 'Contact',
         contactHeading: `Got a problem to solve?`,
-        contactIntro: `Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.`,
-        contactCTA: `Need a Frontend developer? Contact me!`,
+        introText: `Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.`,
+        callToAction: `Need a Frontend developer? Contact me!`,
         namePlaceholder: `Your name`,
         nameError: `Your name is required`,
         emailPlaceholder: `Your email`,
@@ -115,7 +128,11 @@ export class LanguageService {
     },
     de: {
       navBar: {
-        title: '',
+        about: 'Über mich',
+        skills: 'Fähigkeiten',
+        portfolio: 'Portfolio',
+        contact: 'Kontakt',
+        language: 'Sprache',
       },
       aboveTheFold: {
         title: '',
@@ -136,6 +153,14 @@ export class LanguageService {
         title: '',
       }
     },
-  } as const;
+  }
   constructor() { }
+
+  changeLanguage() {
+    if (this.selectedLanguage == 'en') {
+      this.selectedLanguage = 'de';
+    } else {
+      this.selectedLanguage = 'en';
+    }
+  }
 }

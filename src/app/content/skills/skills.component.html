@@ -8,13 +8,12 @@
 
     <div>
         <div class="titel">
-            <h2>My skills</h2>
+            <h2>{{title}}</h2>
             <div></div>
         </div>
         <div>
             <div class="titel-text">
-                <span>I have gained experience in building projects with different frontend technologies and concepts.
-                </span>
+                <span>{{introText}} </span>
             </div>
         </div>
     </div>
@@ -23,17 +22,17 @@
         <div>
             <div class="highlight-text">
                 <span>
-                    Looking for <span style="color:var(--primaryColor) ;">anoterher skill</span> ?
+                    {{questionFron}} <span style="color:var(--primaryColor) ;">{{questionBack}}</span> ?
                 </span>
             </div>
             <div>
                 <span>
-                    Feel free to contact me. I look forward to expanding on my previous knowledge
+                    {{callToAction}}
                 </span>
             </div>
         </div>
         <div class="bnt-frame">
-            <button class="contact-bnt" (click)="scrollToContact()">Get in touch</button>
+            <button class="contact-bnt" (click)="scrollToContact()">{{bnt}}</button>
         </div>
     </div>
 </div>

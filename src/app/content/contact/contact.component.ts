@@ -22,10 +22,10 @@ export class ContactComponent {
     return this.languageService.language[this.languageService.selectedLanguage].contact.contactHeading!;
   }
   get contactIntro(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.contactIntro!;
+    return this.languageService.language[this.languageService.selectedLanguage].contact.introText!;
   }
   get contactCTA(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.contactCTA!;
+    return this.languageService.language[this.languageService.selectedLanguage].contact.callToAction!;
   }
   get namePlaceholder(): string {
     return this.languageService.language[this.languageService.selectedLanguage].contact.namePlaceholder!;
@@ -73,7 +73,7 @@ export class ContactComponent {
   );
 
   constructor() {
-console.log(this.contactIntro);
+    console.log(this.contactIntro);
 
   }
 
@@ -96,10 +96,8 @@ console.log(this.contactIntro);
           next: (response) => {
             this.form.reset();
           },
-          error: (error) => {
-          },
-          complete: () => {
-          },
+          error: (error) => { },
+          complete: () => { },
         });
       this.form.reset();
       this.submitAttempt = false;

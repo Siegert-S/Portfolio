@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from "./skill-icon/skill-icon.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { LanguageService } from '../../service/language.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,6 +12,27 @@ import { Router } from '@angular/router';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
+
+  private languageService = inject(LanguageService);
+
+  get title(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].skills.title!;
+  }
+  get introText(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].skills.introText!;
+  }
+  get questionFron(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].skills.questionFron!;
+  }
+  get questionBack(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].skills.questionBack!;
+  }
+  get callToAction(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].skills.callToAction!;
+  }
+  get bnt(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].skills.button!;
+  }
 
   skillList = [
     { url: '../../../assets/img/html.svg', name: 'HTML' },
