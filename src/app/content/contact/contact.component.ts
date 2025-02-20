@@ -71,6 +71,7 @@ export class ContactComponent {
   submitAttempt = false;
   response = false;
   isSuccsesfull = true;
+
   form = new FormGroup(
     {
       name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z\\d\\s]+$')]),
@@ -105,7 +106,6 @@ export class ContactComponent {
           error: (error) => { this.isSuccsesfull = false; },
           complete: () => { this.responsToUser() },
         });
-      // this.form.reset();
       this.submitAttempt = false;
     }
   }

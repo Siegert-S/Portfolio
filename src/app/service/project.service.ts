@@ -52,7 +52,7 @@ export class ProjectService {
     },
     {
       name: 'Join',
-      imgUrl: '../../../assets/img/picture_pc_join.svg',
+      imgUrl: '../../../assets/img/picture_pc_join.png',
       webUrl: 'http://www.join.saschasiegert.de/html/login.html',
       gitUrl: 'https://github.com/Siegert-S/join',
       skills: ['HTML', 'CSS', 'JavaScript', 'Firebase'],

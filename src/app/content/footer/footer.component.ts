@@ -15,7 +15,10 @@ export class FooterComponent {
   get legal(): string {
     return this.languageService.language[this.languageService.selectedLanguage].footer.legal!;
   }
-
-  email: string = 'Kontakt@SaschaSiegert.de';
-  subject: string = '?subject=Interessiert%20an%20Zusammenarbeit';
+  get email(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].aboveTheFold.email!;
+  }
+  get subject(): string {
+    return this.languageService.language[this.languageService.selectedLanguage].aboveTheFold.subject!;
+  }
 }
