@@ -90,7 +90,7 @@
 }
 
 .last {
-    background-image: url('../../../../assets/img/arrow_back.svg');
+    background-image: url('../../../../../assets/img/arrow_back.svg');
 
     &:hover {
         border-color: var(--secondayrColor);
@@ -98,7 +98,7 @@
 }
 
 .next {
-    background-image: url('../../../../assets/img/arrow_forward.svg');
+    background-image: url('../../../../../assets/img/arrow_forward.svg');
 
     &:hover {
         border-color: var(--secondayrColor);

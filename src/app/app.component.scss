@@ -1,0 +1,37 @@
+.layout-wrapper {
+    max-width: 1440px;
+    background-color: maroon;
+    position: relative;
+}
+
+.shadow {
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+}
+
+.about {
+    top: 15%;
+    right: -360px;
+}
+
+.skills {
+    top: 34%;
+    left: -560px;
+}
+
+.portfolio {
+    top: 60%;
+    left: -390px;
+}
+
+.portfolio-right {
+    top: 70%;
+    right: -510px;
+    rotate: 180deg;
+}
+
+.contact {
+    left: -500px;
+    bottom: -4%;
+}

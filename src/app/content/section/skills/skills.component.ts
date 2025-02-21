@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from "./skill-icon/skill-icon.component";
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { LanguageService } from '../../service/language.service';
+import { LanguageService } from '../../../service/language.service';
 
 @Component({
   selector: 'app-skills',

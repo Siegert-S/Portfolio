@@ -80,10 +80,10 @@
     height: 39px;
     margin-top: 50px;
     margin-right: 7%;
-    background-image: url('../../../assets/img/go_up_arrow.svg');
+    background-image: url('../../../../assets/img/go_up_arrow.svg');
 
     &:hover {
-        background-image: url('../../../assets/img/go_up_arrow_hover.svg');
+        background-image: url('../../../../assets/img/go_up_arrow_hover.svg');
     }
 }
 
@@ -184,7 +184,7 @@ form {
 }
 
 ::-webkit-resizer {
-    background-image: url('../../../assets/img/resize_grabber.svg');
+    background-image: url('../../../../assets/img/resize_grabber.svg');
     width: 13px;
     height: 13px;
     background-repeat: no-repeat;
@@ -208,7 +208,7 @@ form {
         background-position: center;
         border-radius: 8px;
         margin-right: 8px;
-        background-image: url('../../../assets/img/check_box_blank.svg');
+        background-image: url('../../../../assets/img/check_box_blank.svg');
         transition: all ease-in-out 100ms;
     }
 
@@ -218,7 +218,7 @@ form {
     }
 
     >input:checked+div {
-        background-image: url('../../../assets/img/check_box_checked.svg');
+        background-image: url('../../../../assets/img/check_box_checked.svg');
     }
 
     >span {

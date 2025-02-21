@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LanguageService } from '../../service/language.service';
+import { LanguageService } from '../../../service/language.service';
 
 @Component({
   selector: 'app-contact',

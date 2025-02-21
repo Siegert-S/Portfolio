@@ -12,15 +12,15 @@ export class ReferencesComponent {
 
   referencList = [
     {
-      img: '../../../../assets/img/user-icon.png',
+      img: '../../../../../assets/img/user-icon.png',
       name: 'Name',
       text: 'reference text 1'
     }, {
-      img: '../../../../assets/img/user-icon.png',
+      img: '../../../../../assets/img/user-icon.png',
       name: 'Name',
       text: 'reference text 2'
     }, {
-      img: '../../../../assets/img/user-icon.png',
+      img: '../../../../../assets/img/user-icon.png',
       name: 'Name',
       text: 'reference text 3'
     },

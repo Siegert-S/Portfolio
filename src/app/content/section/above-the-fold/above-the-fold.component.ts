@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../service/language.service';
+import { LanguageService } from '../../../service/language.service';
 
 @Component({
   selector: 'app-above-the-fold',
