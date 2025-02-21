@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 12vh;
+    // padding-top: 12vh;
     position: relative;
     z-index: 2;
     overflow-y: hidden;
@@ -269,13 +269,6 @@ input[type="submit"] {
             background-color: var(--disableColor);
         }
     }
-}
-
-.shadow-contact {
-    position: absolute;
-    z-index: 1;
-    left: -500px;
-    bottom: -45%;
 }
 
 @media (max-width: 1299px) {

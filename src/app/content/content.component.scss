@@ -1,11 +1,11 @@
-:host {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+// :host {
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+// }
 
 .content-wrapper {
     max-width: 1440px;
@@ -17,40 +17,4 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-}
-
-.shadow-about {
-    position: absolute;
-    z-index: 1;
-    top: 15%;
-    right: -360px;
-}
-
-.shadow-skills {
-    position: absolute;
-    z-index: 1;
-    top: 34%;
-    left: -560px;
-}
-
-.shadow-portfolio {
-    position: absolute;
-    z-index: 1;
-    top: 60%;
-    left: -390px;
-}
-
-.shadow-portfolio-right {
-    position: absolute;
-    z-index: 1;
-    top: 70%;
-    right: -510px;
-    rotate: 180deg;
-}
-
-.shadow-contact {
-    position: absolute;
-    z-index: 1;
-    left: -500px;
-    bottom: -4%;
 }

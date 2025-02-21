@@ -1,4 +1,4 @@
-<div id="contact" class="contact-wrapper">
+<div class="contact-wrapper">
     <div class="titel-wrapper">
         <div class="titel-line"></div>
         <h2 class="titel">{{title}}</h2>
@@ -14,7 +14,8 @@
         </div>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             @if (response && isSuccsesfull) { <div (click)="responsToUser()" class="user-response"> {{succses}} </div>}
-            @if (response && !isSuccsesfull) { <div (click)="responsToUser()" class="user-response failure"> {{failure}} </div>}
+            @if (response && !isSuccsesfull) { <div (click)="responsToUser()" class="user-response failure"> {{failure}}
+            </div>}
             <div class="form-div">
                 <label class="field-style" [class.invalid]="invalidityCheck('name')"
                     [class.valid]="validityCheck('name')">
@@ -68,5 +69,4 @@
     <div class="button-wrapper">
         <a class="scroll-up-bnt" href="#top"></a>
     </div>
-    <div class="shadow-contact"><img src="../../assets/img/33. Purple shadow Footer.svg" alt=""></div>
 </div>

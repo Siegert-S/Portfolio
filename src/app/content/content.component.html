@@ -1,16 +1,7 @@
 <div class="content-wrapper">
-    <!-- <div class="shadow-about"><img src="../../../assets/img/30. Purple shadow about me.svg" alt=""></div>
-    <div class="shadow-skills"><img src="../../assets/img/31. Green shadow Skills Portfolio.svg" alt=""></div>
-    <div class="shadow-portfolio"><img src="../../assets/img/32 Purple shadow portfolio.svg" alt=""></div>
-    <div class="shadow-portfolio-right"><img src="../../assets/img/31. Green shadow Skills Portfolio.svg" alt=""></div> -->
-    <app-section [showContent]="'above-the-fold'"></app-section>
-    <app-section [showContent]="'about'"></app-section>
-    <app-section [showContent]="'skills'"></app-section>
-    <app-section [showContent]="'portfolio'"></app-section>
-    <app-section [showContent]="'contact'"></app-section>
-    <!-- <app-above-the-fold></app-above-the-fold>
-    <app-about></app-about>
-    <app-skills></app-skills>
-    <app-portfolio></app-portfolio>
-    <app-contact></app-contact> -->
+    <app-section id="top" [showContent]="'above-the-fold'"></app-section>
+    <app-section id="about" [showContent]="'about'"></app-section>
+    <app-section id="skills" [showContent]="'skills'"></app-section>
+    <app-section id="portfolio" [showContent]="'portfolio'"></app-section>
+    <app-section id="contact" [showContent]="'contact'"></app-section>
 </div>
