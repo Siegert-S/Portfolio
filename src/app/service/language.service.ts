@@ -2,59 +2,100 @@ import { Injectable } from '@angular/core';
 
 type LanguageKey = 'en' | 'de';
 
-interface TextObject {
-  'title'?: string;
-  'introText'?: string;
-  'commuteText'?: string;
-  'mantalityText'?: string;
-  'professionText'?: string;
-  'hint'?: string;
-  'button'?: string;
-  'email'?: string;
-  'subject'?: string;
-  'headline1'?: string;
-  'headline2'?: string;
-  'headline3'?: string;
-  'contactHeading'?: string;
-  'contactDetails'?: string;
-  'callToAction'?: string;
-  'namePlaceholder'?: string;
-  'nameError'?: string;
-  'emailPlaceholder'?: string;
-  'emailError'?: string;
-  'messagePlaceholder'?: string;
-  'messageError'?: string;
-  'priPolicyFront'?: string;
-  'priPolicy'?: string;
-  'priPolicyBack'?: string;
-  'priPolicyError'?: string;
-  'about'?: string;
-  'skills'?: string;
-  'portfolio'?: string;
-  'contact'?: string;
-  'language'?: string;
-  'questionFron'?: string;
-  'questionBack'?: string;
-  'legal'?: string;
-  'confirmSubmit'?: string;
-  'errorSubmit'?: string;
-  // ''?: string;
+type TextKey =
+  'title' | 'introText' |
+  'commuteText' | 'mantalityText' |
+  'professionText' | 'hint' |
+  'button' | 'email' |
+  'subject' | 'headline1' |
+  'headline2' | 'headline3' |
+  'contactHeading' | 'contactDetails' |
+  'callToAction' | 'namePlaceholder' |
+  'nameError' | 'emailPlaceholder' |
+  'emailError' | 'messagePlaceholder' |
+  'messageError' | 'priPolicyFront' |
+  'priPolicy' | 'priPolicyBack' |
+  'priPolicyError' | 'about' |
+  'skills' | 'portfolio' |
+  'contact' | 'language' |
+  'questionFron' | 'questionBack' |
+  'legal' | 'confirmSubmit' |
+  'errorSubmit';
+
+type ComponentKey =
+  'navBar' |
+  'aboveTheFold' |
+  'about' |
+  'skills' |
+  'portfolio' |
+  'contact' |
+  'footer';
+
+// interface TextObject {
+//   'title'?: string;
+//   'introText'?: string;
+//   'commuteText'?: string;
+//   'mantalityText'?: string;
+//   'professionText'?: string;
+//   'hint'?: string;
+//   'button'?: string;
+//   'email'?: string;
+//   'subject'?: string;
+//   'headline1'?: string;
+//   'headline2'?: string;
+//   'headline3'?: string;
+//   'contactHeading'?: string;
+//   'contactDetails'?: string;
+//   'callToAction'?: string;
+//   'namePlaceholder'?: string;
+//   'nameError'?: string;
+//   'emailPlaceholder'?: string;
+//   'emailError'?: string;
+//   'messagePlaceholder'?: string;
+//   'messageError'?: string;
+//   'priPolicyFront'?: string;
+//   'priPolicy'?: string;
+//   'priPolicyBack'?: string;
+//   'priPolicyError'?: string;
+//   'about'?: string;
+//   'skills'?: string;
+//   'portfolio'?: string;
+//   'contact'?: string;
+//   'language'?: string;
+//   'questionFron'?: string;
+//   'questionBack'?: string;
+//   'legal'?: string;
+//   'confirmSubmit'?: string;
+//   'errorSubmit'?: string;
+//   // ''?: string;
+// }
+
+type TextObject = {
+  [key in TextKey]?: string;
 }
 
-interface ComponentTexts {
-  'navBar': TextObject;
-  'aboveTheFold': TextObject;
-  'about': TextObject;
-  'skills': TextObject;
-  'portfolio': TextObject;
-  'contact': TextObject;
-  'footer': TextObject;
+// interface ComponentTexts {
+//   'navBar': TextObject;
+//   'aboveTheFold': TextObject;
+//   'about': TextObject;
+//   'skills': TextObject;
+//   'portfolio': TextObject;
+//   'contact': TextObject;
+//   'footer': TextObject;
+// }
+
+type ComponentTexts = {
+  [key in ComponentKey]: TextObject;
 }
 
-interface Language {
-  'en': ComponentTexts;
-  'de': ComponentTexts;
+type Language = {
+  [key in LanguageKey]: ComponentTexts;
 }
+
+// interface Language {
+//   'en': ComponentTexts;
+//   'de': ComponentTexts;
+// }
 
 @Injectable({
   providedIn: 'root'
@@ -199,7 +240,18 @@ export class LanguageService {
       },
     },
   }
-  constructor() { }
+  constructor() {
+    console.log(this.getLanguage('contact', 'emailError'));
+
+  }
+
+  getLanguage(component: ComponentKey, text: TextKey) {
+    return this.language[this.selectedLanguage][component][text];
+  }
+
+  selectLanguage(lang: LanguageKey) {
+    this.selectedLanguage = lang;
+  }
 
   changeLanguage() {
     if (this.selectedLanguage == 'en') {

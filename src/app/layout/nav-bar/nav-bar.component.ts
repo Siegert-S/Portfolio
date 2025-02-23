@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../service/language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,7 +12,7 @@ import { LanguageService } from '../../service/language.service';
 })
 export class NavBarComponent {
 
-
+  private router = inject(Router);
   private languageService = inject(LanguageService);
 
   get about(): string {
@@ -47,5 +48,11 @@ export class NavBarComponent {
 
   changeLanguage() {
     this.languageService.changeLanguage();
+  }
+
+  navigate(targetRoute: string, targetId?: string) {
+    this.router.navigateByUrl(targetRoute).then(()=> {
+      console.log('nav works');      
+    })
   }
 }

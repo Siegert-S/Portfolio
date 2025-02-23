@@ -4,6 +4,9 @@
             <a class="name" href="#top">Sascha</a>
         </div>
         <div class="link-wrapper" [class.menuOpen]="burgerMenuOpen">
+            <div class="link" (click)="navigate('legal')">test</div>
+            <div class="link" (click)="navigate('')">test2</div>
+
             <a class="link" href="#about" (click)="clickLink(1)">
                 <div [ngStyle]="activLink === 1 ? { color: '#70e61c' } : null">
                     {{about}}
