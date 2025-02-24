@@ -1,11 +1,11 @@
 <div class="portfolio-wrapper">
     <div>
         <div class="vektor"></div>
-        <h2>{{title}}</h2>
+        <h2>{{getText('title')}}</h2>
         <div class="vektorBig"></div>
     </div>
     <div>
-        <span>{{introText}}</span>
+        <span>{{getText('introText')}}</span>
     </div>
     <div>
         @for (item of projects; track $index) {

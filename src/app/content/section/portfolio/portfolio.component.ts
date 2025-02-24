@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ProjectComponent } from "./project/project.component";
 import { CommonModule } from '@angular/common';
 import { ReferencesComponent } from "./references/references.component";
-import { LanguageService } from '../../../service/language.service';
+import { LanguageService, ComponentKey, TextKey } from '../../../service/language.service';
 import { ProjectService } from '../../../service/project.service';
 
 @Component({
@@ -17,14 +17,13 @@ export class PortfolioComponent {
   private languageService = inject(LanguageService);
   private projectsService = inject(ProjectService);
 
-  get title(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].portfolio.title!;
-  }
-  get introText(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].portfolio.introText!;
-  }
+  private componentKey: ComponentKey = 'portfolio';
 
   projects = this.projectsService.getProjects();
 
   constructor() { }
+
+  getText(text: TextKey) {
+    return this.languageService.getLanguage(this.componentKey, text);
+  }
 }
