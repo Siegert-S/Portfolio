@@ -4,40 +4,42 @@
             <a class="name" [routerLink]="''" fragment="top">Sascha</a>
         </div>
         <div class="link-wrapper" [class.menuOpen]="burgerMenuOpen">
-            <!-- <a [routerLink]="'legal'">legal</a>
-            <a [routerLink]="''" fragment="contact">home</a> -->
 
             <a class="link" [routerLink]="''" fragment="about" (click)="clickLink(1)">
                 <div [ngStyle]="activLink === 1 ? { color: '#70e61c' } : null">
-                    {{about}}
+                    {{getText('about')}}
                     <div [style.visibility]="(activLink == 1) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="skills" (click)="clickLink(2)">
                 <div [ngStyle]="activLink === 2 ? { color: '#70e61c' } : null">
-                    {{skills}}
+                    {{getText('skills')}}
                     <div [style.visibility]="(activLink == 2) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="portfolio" (click)="clickLink(3)">
                 <div [ngStyle]="activLink === 3 ? { color: '#70e61c' } : null">
-                    {{portfolio}}
+                    {{getText('portfolio')}}
                     <div [style.visibility]="(activLink == 3) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="contact" (click)="clickLink(4)">
                 <div [ngStyle]="activLink === 4 ? { color: '#70e61c' } : null">
-                    {{contact}}
+                    {{getText('contact')}}
                     <div [style.visibility]="(activLink == 4) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
-            <div class="link" (click)="changeLanguage()">
+            <div class="link language" (click)="clickLanguageMenu()">
                 <div>
-                    {{language}}
+                    {{getText('language')}}
+                </div>
+                <div class="language-list" [class.open]="languageMenuOpen">
+                    <div (click)="setLanguage('en')">EN</div>
+                    <div (click)="setLanguage('de')">DE</div>
                 </div>
             </div>
         </div>

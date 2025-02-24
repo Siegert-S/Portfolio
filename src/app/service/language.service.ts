@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-type LanguageKey = 'en' | 'de';
+export type LanguageKey = 'en' | 'de';
 
 export type TextKey =
   'title' | 'introText' |

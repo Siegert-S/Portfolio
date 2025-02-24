@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { LanguageService, ComponentKey, TextKey } from '../../service/language.service';
+import { LanguageService, ComponentKey, TextKey, LanguageKey } from '../../service/language.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -15,26 +15,9 @@ export class NavBarComponent {
   private languageService = inject(LanguageService);
   private componentKey: ComponentKey = 'navBar';
 
-  get about(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].navBar.about!;
-  }
-  get skills(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].navBar.skills!;
-  }
-  get portfolio(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].navBar.portfolio!;
-  }
-  get contact(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].navBar.contact!;
-  }
-  get language(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].navBar.language!;
-  }
-
-
-
   activLink = 0;
   burgerMenuOpen = false;
+  languageMenuOpen = false;
 
   constructor() { }
 
@@ -44,11 +27,16 @@ export class NavBarComponent {
   }
 
   clickBurgerMenu() {
-    this.burgerMenuOpen = !this.burgerMenuOpen
+    this.burgerMenuOpen = !this.burgerMenuOpen;
   }
 
-  changeLanguage() {
-    this.languageService.changeLanguage();
+  clickLanguageMenu() {
+    this.languageMenuOpen = !this.languageMenuOpen;
+  }
+
+  setLanguage(lang: LanguageKey) {
+    this.languageService.selectLanguage(lang);
+    this.languageMenuOpen = true;
   }
 
   getText(text: TextKey) {
