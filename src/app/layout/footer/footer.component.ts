@@ -1,24 +1,20 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../service/language.service';
+import { ComponentKey, LanguageService, TextKey } from '../../service/language.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
 
   private languageService = inject(LanguageService);
+  private componentKey: ComponentKey = 'footer';
 
-  get legal(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].footer.legal!;
-  }
-  get email(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].aboveTheFold.email!;
-  }
-  get subject(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].aboveTheFold.subject!;
+  getText(text: TextKey) {
+    return this.languageService.getLanguage(this.componentKey, text);
   }
 }
