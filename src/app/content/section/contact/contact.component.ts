@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LanguageService } from '../../../service/language.service';
+import { ComponentKey, LanguageService, TextKey } from '../../../service/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,58 +14,7 @@ import { LanguageService } from '../../../service/language.service';
 export class ContactComponent {
 
   private languageService = inject(LanguageService);
-
-  get title(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.title!;
-  }
-  get contactHeading(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.contactHeading!;
-  }
-  get contactIntro(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.introText!;
-  }
-  get contactCTA(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.callToAction!;
-  }
-  get namePlaceholder(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.namePlaceholder!;
-  }
-  get nameError(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.nameError!;
-  }
-  get emailPlaceholder(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.emailPlaceholder!;
-  }
-  get emailError(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.emailError!;
-  }
-  get messagePlaceholder(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.messagePlaceholder!;
-  }
-  get messageError(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.messageError!;
-  }
-  get priPolicyFront(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicyFront!;
-  }
-  get priPolicy(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicy!;
-  }
-  get priPolicyBack(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicyBack!;
-  }
-  get priPolicyError(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.priPolicyError!;
-  }
-  get bnt(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.button!;
-  }
-  get succses(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.confirmSubmit!;
-  }
-  get failure(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].contact.errorSubmit!;
-  }
+  private componentKey: ComponentKey = 'contact';
 
   http = inject(HttpClient);
   submitAttempt = false;
@@ -74,14 +23,12 @@ export class ContactComponent {
 
   form = new FormGroup(
     {
-      name: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z\\d\\s]+$')]),
+      name: new FormControl('', [Validators.required, Validators.pattern('^(?!\\s*$).+')]),
       email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z]{2,}$')]),
-      message: new FormControl('', [Validators.required]),
+      message: new FormControl('', [Validators.required, Validators.pattern('^(?!\\s*$).+')]),
       privacy: new FormControl(false, Validators.requiredTrue)
     }
   );
-
-  constructor() { }
 
   post = {
     endPoint: 'https://saschasiegert.de/sendMail.php',
@@ -93,6 +40,8 @@ export class ContactComponent {
       },
     },
   };
+
+  constructor() { }
 
   onSubmit() {
     this.submitAttempt = true;
@@ -131,5 +80,9 @@ export class ContactComponent {
 
   responsToUser() {
     this.response = !this.response;
+  }
+
+  getText(text: TextKey) {
+    return this.languageService.getLanguage(this.componentKey, text);
   }
 }

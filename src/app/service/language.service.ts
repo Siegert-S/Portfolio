@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 type LanguageKey = 'en' | 'de';
 
-type TextKey =
+export type TextKey =
   'title' | 'introText' |
   'commuteText' | 'mantalityText' |
   'professionText' | 'hint' |
@@ -22,7 +22,7 @@ type TextKey =
   'legal' | 'confirmSubmit' |
   'errorSubmit';
 
-type ComponentKey =
+export type ComponentKey =
   'navBar' |
   'aboveTheFold' |
   'about' |
@@ -31,58 +31,9 @@ type ComponentKey =
   'contact' |
   'footer';
 
-// interface TextObject {
-//   'title'?: string;
-//   'introText'?: string;
-//   'commuteText'?: string;
-//   'mantalityText'?: string;
-//   'professionText'?: string;
-//   'hint'?: string;
-//   'button'?: string;
-//   'email'?: string;
-//   'subject'?: string;
-//   'headline1'?: string;
-//   'headline2'?: string;
-//   'headline3'?: string;
-//   'contactHeading'?: string;
-//   'contactDetails'?: string;
-//   'callToAction'?: string;
-//   'namePlaceholder'?: string;
-//   'nameError'?: string;
-//   'emailPlaceholder'?: string;
-//   'emailError'?: string;
-//   'messagePlaceholder'?: string;
-//   'messageError'?: string;
-//   'priPolicyFront'?: string;
-//   'priPolicy'?: string;
-//   'priPolicyBack'?: string;
-//   'priPolicyError'?: string;
-//   'about'?: string;
-//   'skills'?: string;
-//   'portfolio'?: string;
-//   'contact'?: string;
-//   'language'?: string;
-//   'questionFron'?: string;
-//   'questionBack'?: string;
-//   'legal'?: string;
-//   'confirmSubmit'?: string;
-//   'errorSubmit'?: string;
-//   // ''?: string;
-// }
-
 type TextObject = {
   [key in TextKey]?: string;
 }
-
-// interface ComponentTexts {
-//   'navBar': TextObject;
-//   'aboveTheFold': TextObject;
-//   'about': TextObject;
-//   'skills': TextObject;
-//   'portfolio': TextObject;
-//   'contact': TextObject;
-//   'footer': TextObject;
-// }
 
 type ComponentTexts = {
   [key in ComponentKey]: TextObject;
@@ -91,11 +42,6 @@ type ComponentTexts = {
 type Language = {
   [key in LanguageKey]: ComponentTexts;
 }
-
-// interface Language {
-//   'en': ComponentTexts;
-//   'de': ComponentTexts;
-// }
 
 @Injectable({
   providedIn: 'root'
@@ -240,10 +186,7 @@ export class LanguageService {
       },
     },
   }
-  constructor() {
-    console.log(this.getLanguage('contact', 'emailError'));
-
-  }
+  constructor() { }
 
   getLanguage(component: ComponentKey, text: TextKey) {
     return this.language[this.selectedLanguage][component][text];
