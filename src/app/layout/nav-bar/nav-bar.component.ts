@@ -1,19 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../service/language.service';
-import { Router } from '@angular/router';
+import { LanguageService, ComponentKey, TextKey } from '../../service/language.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
 export class NavBarComponent {
 
-  private router = inject(Router);
   private languageService = inject(LanguageService);
+  private componentKey: ComponentKey = 'navBar';
 
   get about(): string {
     return this.languageService.language[this.languageService.selectedLanguage].navBar.about!;
@@ -36,6 +36,7 @@ export class NavBarComponent {
   activLink = 0;
   burgerMenuOpen = false;
 
+  constructor() { }
 
   clickLink(number: number) {
     this.activLink = number;
@@ -50,9 +51,7 @@ export class NavBarComponent {
     this.languageService.changeLanguage();
   }
 
-  navigate(targetRoute: string, targetId?: string) {
-    this.router.navigateByUrl(targetRoute).then(()=> {
-      console.log('nav works');      
-    })
+  getText(text: TextKey) {
+    return this.languageService.getLanguage(this.componentKey, text);
   }
 }

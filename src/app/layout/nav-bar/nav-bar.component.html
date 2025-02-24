@@ -1,34 +1,34 @@
 <nav>
     <div class="navContent-wrapper">
         <div>
-            <a class="name" href="#top">Sascha</a>
+            <a class="name" [routerLink]="''" fragment="top">Sascha</a>
         </div>
         <div class="link-wrapper" [class.menuOpen]="burgerMenuOpen">
-            <div class="link" (click)="navigate('legal')">test</div>
-            <div class="link" (click)="navigate('')">test2</div>
+            <!-- <a [routerLink]="'legal'">legal</a>
+            <a [routerLink]="''" fragment="contact">home</a> -->
 
-            <a class="link" href="#about" (click)="clickLink(1)">
+            <a class="link" [routerLink]="''" fragment="about" (click)="clickLink(1)">
                 <div [ngStyle]="activLink === 1 ? { color: '#70e61c' } : null">
                     {{about}}
                     <div [style.visibility]="(activLink == 1) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
-            <a class="link" href="#skills" (click)="clickLink(2)">
+            <a class="link" [routerLink]="''" fragment="skills" (click)="clickLink(2)">
                 <div [ngStyle]="activLink === 2 ? { color: '#70e61c' } : null">
                     {{skills}}
                     <div [style.visibility]="(activLink == 2) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
-            <a class="link" href="#portfolio" (click)="clickLink(3)">
+            <a class="link" [routerLink]="''" fragment="portfolio" (click)="clickLink(3)">
                 <div [ngStyle]="activLink === 3 ? { color: '#70e61c' } : null">
                     {{portfolio}}
                     <div [style.visibility]="(activLink == 3) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
-            <a class="link" href="#contact" (click)="clickLink(4)">
+            <a class="link" [routerLink]="''" fragment="contact" (click)="clickLink(4)">
                 <div [ngStyle]="activLink === 4 ? { color: '#70e61c' } : null">
                     {{contact}}
                     <div [style.visibility]="(activLink == 4) ? 'visible':'hidden'" class="vector"></div>

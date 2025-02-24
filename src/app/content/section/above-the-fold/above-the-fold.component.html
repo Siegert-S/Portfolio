@@ -7,7 +7,7 @@
         </div>
 
         <div>
-            <div> {{hint}} </div>
+            <div> {{getText('hint')}} </div>
             <img src="../../../assets/img/arrow.svg" alt="">
         </div>
         <div>
@@ -16,25 +16,34 @@
                 <a href="https://github.com/Siegert-S" target="_blank" rel="noopener noreferrer">
                     <img src="../../../assets/img/github.svg" alt=""></a>
 
-                <a [href]="'mailto:' + email + subject"><img src="../../../assets/img/email.svg" alt=""></a>
+                <a [href]="'mailto:' + getText('email') + getText('subject')">
+                    <img src="../../../assets/img/email.svg" alt="">
+                </a>
 
                 <a href="https://www.linkedin.com/in/sascha-siegert-092822350" target="_blank"
                     rel="noopener noreferrer">
                     <img src="../../../assets/img/linkedin.svg" alt=""></a>
 
-                <a href="#contact">{{email}}</a>
+                <a href="#contact">{{getText('email')}}</a>
 
             </div>
         </div>
         <div>
-            <div>
-                <div> {{head1}} </div>
+            <!-- <div>
+                <div> {{getText('headline1')}} </div>
                 <div>
-                    <div>{{head2}}</div>
-                    <div>{{head3}}</div>
+                    <div>{{getText('headline2')}}</div>
+                    <div>{{getText('headline3')}}</div>
+                </div>
+            </div> -->
+            <div>
+                <div>I am</div>
+                <div>
+                    <div>Sascha Siegert</div>
+                    <div>FRONTEND DEVELOPER</div>
                 </div>
             </div>
-            <button (click)="scrollToContact()"> {{bnt}} </button>
+            <button (click)="scrollToContact()"> {{getText('button')}} </button>
         </div>
     </div>
 </div>
