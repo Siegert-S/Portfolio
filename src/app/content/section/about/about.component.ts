@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../../service/language.service';
+import { LanguageService, TextKey, ComponentKey } from '../../../service/language.service';
 
 @Component({
   selector: 'app-about',
@@ -10,26 +10,11 @@ import { LanguageService } from '../../../service/language.service';
 })
 export class AboutComponent {
   private languageService = inject(LanguageService);
-
-  get title(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].about.title!;
-  }
-
-  get intro(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].about.introText!;
-  }
-
-  get textCommute(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].about.commuteText!;
-  }
-
-  get textMantality(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].about.mantalityText!;
-  }
-
-  get textProfession(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].about.professionText!;
-  }
+  private componentKey: ComponentKey = 'about';
 
   constructor() { }
+
+  getText(text: TextKey) {
+    return this.languageService.getLanguage(this.componentKey, text);
+  }
 }
