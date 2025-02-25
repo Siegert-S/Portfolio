@@ -3,11 +3,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ComponentKey, LanguageService, TextKey } from '../../../service/language.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, CommonModule, HttpClientModule],
+  imports: [ReactiveFormsModule, FormsModule, CommonModule, HttpClientModule, RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -76,6 +77,13 @@ export class ContactComponent {
     if (!control) return false;
 
     return control.valid && control.touched;
+  }
+
+  showPolicyErrorMsg() {
+    let flag = false;
+    let filed = this.form.get('privacy')!;
+    flag = filed.invalid && (filed.dirty || this.submitAttempt);
+    return flag;
   }
 
   responsToUser() {

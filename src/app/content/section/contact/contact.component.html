@@ -26,8 +26,8 @@
                     @if (invalidityCheck('name')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('name')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>
-                @if (invalidityCheck('name')) {<span class="error-message">{{getText('nameError')}}</span>}
-
+                <span class="error-message"
+                    [style.visibility]="invalidityCheck('name') ? 'visible':'hidden' ">{{getText('nameError')}}</span>
             </div>
             <div class="form-div">
                 <label class="field-style" [class.invalid]="invalidityCheck('email')"
@@ -36,7 +36,8 @@
                     @if (invalidityCheck('email')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('email')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>
-                @if (invalidityCheck('email')) {<span class="error-message">{{getText('emailError')}}</span>}
+                <span class="error-message"
+                    [style.visibility]="invalidityCheck('email') ? 'visible':'hidden' ">{{getText('emailError')}}</span>
             </div>
             <div class="form-div">
                 <div>
@@ -46,7 +47,8 @@
                         @if (invalidityCheck('message')) { <img src="../../../assets/img/warning.svg" alt=""> }
                         @if (validityCheck('message')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                     </label>
-                    @if (invalidityCheck('message')) {<span class="error-message">{{getText('messageError')}}</span>}
+                    <span class="error-message"
+                        [style.visibility]="invalidityCheck('message') ? 'visible':'hidden' ">{{getText('messageError')}}</span>
                 </div>
                 <div>
                     <div>
@@ -54,10 +56,10 @@
                             <input formControlName="privacy" type="checkbox">
                             <div></div>
                             <span>
-                                {{getText('priPolicyFront')}} <a
-                                    href="http://xn--datenschutzerklrung-uwb.saschasiegert.de/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    {{getText('priPolicy')}} </a>
+                                {{getText('priPolicyFront')}}
+                                <a [routerLink]="'policy'">
+                                    {{getText('priPolicy')}}
+                                </a>
                                 {{getText('priPolicyBack')}}
                             </span>
                         </label>

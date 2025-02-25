@@ -3,24 +3,16 @@ import { Injectable } from '@angular/core';
 export type LanguageKey = 'en' | 'de';
 
 export type TextKey =
-  'title' | 'introText' |
-  'commuteText' | 'mantalityText' |
-  'professionText' | 'hint' |
-  'button' | 'email' |
-  'subject' | 'headline1' |
-  'headline2' | 'headline3' |
-  'contactHeading' | 'contactDetails' |
-  'callToAction' | 'namePlaceholder' |
-  'nameError' | 'emailPlaceholder' |
-  'emailError' | 'messagePlaceholder' |
-  'messageError' | 'priPolicyFront' |
-  'priPolicy' | 'priPolicyBack' |
-  'priPolicyError' | 'about' |
-  'skills' | 'portfolio' |
-  'contact' | 'language' |
-  'questionFron' | 'questionBack' |
-  'legal' | 'confirmSubmit' |
-  'errorSubmit';
+  'title' | 'introText' | 'commuteText' | 'mantalityText' |
+  'professionText' | 'hint' | 'button' | 'email' |
+  'subject' | 'headline1' | 'headline2' | 'headline3' |
+  'contactHeading' | 'contactDetails' | 'callToAction' | 'namePlaceholder' |
+  'nameError' | 'emailPlaceholder' | 'emailError' | 'messagePlaceholder' |
+  'messageError' | 'priPolicyFront' | 'priPolicy' | 'priPolicyBack' |
+  'priPolicyError' | 'about' | 'skills' | 'portfolio' |
+  'contact' | 'language' | 'questionFron' | 'questionBack' |
+  'legal' | 'confirmSubmit' | 'errorSubmit' | 'kanzlei' |
+  'providerFront' | 'providerBack' | 'represented' | 'law';
 
 export type ComponentKey =
   'navBar' |
@@ -29,7 +21,7 @@ export type ComponentKey =
   'skills' |
   'portfolio' |
   'contact' |
-  'footer';
+  'footer' | 'legal';
 
 type TextObject = {
   [key in TextKey]?: string;
@@ -114,6 +106,26 @@ export class LanguageService {
       },
       footer: {
         legal: 'Legal Notice',
+      },
+      legal: {
+        title: 'Legal Notice',
+        introText: `The use of our website is generally possible without providing personal data. If personal data  
+                    (such as name, address, or email addresses) is collected on our pages, this is always done on a voluntary basis whenever possible.  
+                    This data will not be passed on to third parties without your explicit consent. <br>  
+                    We would like to point out that data transmission over the internet (e.g., when communicating via email)  
+                    may have security vulnerabilities. A complete protection of data against access by third parties is not possible. <br>  
+                    The use of contact data published in the context of the legal notice obligation by third parties for sending unsolicited  
+                    advertising and information materials is hereby expressly prohibited. The operators of the pages expressly  
+                    reserve the right to take legal action in the case of the unsolicited sending of advertising information,  
+                    such as spam emails.<br>`,
+        contact: 'Contact',
+        headline1: 'Disclaimer',
+        headline2: 'Privacy Policy',
+        kanzlei: 'Law Firm',
+        providerFront: 'Website legal notice created by',
+        providerBack: 'from',
+        represented: 'Represented by',
+        law: 'Information according to § 5 TMG',
       }
     },
     de: {
@@ -184,6 +196,27 @@ export class LanguageService {
       footer: {
         legal: 'Impressum',
       },
+      legal: {
+        title: 'Impressum',
+        introText: `  Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten
+                      personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, erfolgt dies, soweit
+                      möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte
+                      weitergegeben. <br>
+                      Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken
+                      aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich. <br>
+                      Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur Übersendung von nicht
+                      ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich widersprochen. Die Betreiber
+                      der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen,
+                      etwa durch Spam-Mails, vor.<br>`,
+        contact: 'Kontakt',
+        headline1: 'Haftungsausschluss',
+        headline2: 'Datenschutz',
+        kanzlei: 'Kanzlei',
+        providerFront: 'Website Impressum erstellt durch',
+        providerBack: 'von der',
+        represented: 'Vertreten durch',
+        law: 'Angaben gemäß § 5 TMG',
+      }
     },
   }
   constructor() { }

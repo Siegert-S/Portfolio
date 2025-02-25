@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService, ComponentKey, TextKey } from '../service/language.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -9,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class LegalNoticeComponent {
 
+  private languageService = inject(LanguageService);
+  private componentKey: ComponentKey = 'legal';
+
+  // email = 'test';
+
+  get email() {
+    return this.languageService.getLanguage('aboveTheFold', 'email')
+  }
+
+  getText(text: TextKey) {
+    return this.languageService.getLanguage(this.componentKey, text);
+  }
 }
