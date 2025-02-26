@@ -1,4 +1,11 @@
 import { Injectable } from '@angular/core';
+import { PRIVACY_POLICY_DE } from './texts/privacy-policy.de';
+import { LEGAL_DE } from './texts/legal-notice.de';
+
+export type Paragraph = {
+  title?: string;
+  text?: string[];
+}
 
 export type LanguageKey = 'en' | 'de';
 
@@ -39,6 +46,9 @@ type Language = {
   providedIn: 'root'
 })
 export class LanguageService {
+
+  test = PRIVACY_POLICY_DE;
+  test1 = LEGAL_DE;
 
   selectedLanguage: LanguageKey = 'en';
 
@@ -219,7 +229,12 @@ export class LanguageService {
       }
     },
   }
-  constructor() { }
+  constructor() {
+    console.log(this.test1);
+    console.log(Object.keys(this.test).length);
+
+
+  }
 
   getLanguage(component: ComponentKey, text: TextKey) {
     return this.language[this.selectedLanguage][component][text];
