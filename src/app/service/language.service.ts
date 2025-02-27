@@ -13,6 +13,21 @@ export type Paragraph = {
   text?: string[];
 }
 
+export type Section = 'content' | 'layout' | 'legal' | 'privacy';
+
+
+type ActivL = {
+  [key in Section]: { [key: string]: Paragraph };
+}
+
+// interface aLanguage {
+//   content: { [key: string]: Paragraph; };
+//   layout: { [key: string]: Paragraph; };
+//   legal: { [key: string]: Paragraph; };
+//   privacy: { [key: string]: Paragraph; };
+// }
+
+
 export type LanguageKey = 'en' | 'de';
 
 export type TextKey =
@@ -68,7 +83,7 @@ export class LanguageService {
     }
   }
 
-  activLanguage = this.languageText.en;
+  activLanguage: ActivL = this.languageText.en;
 
   selectedLanguage: LanguageKey = 'en';
 
@@ -249,32 +264,36 @@ export class LanguageService {
       }
     },
   }
-  constructor() {
-    // console.log(this.languageText);
-    // console.log(Object.keys(this.languageText).length);
-    console.log(this.activLanguage);
-
-
-
-  }
+  constructor() { }
 
   setLanguage(language: LanguageKey) {
     this.activLanguage = this.languageText[language];
   }
 
-  getLanguage(component: ComponentKey, text: TextKey) {
-    return this.language[this.selectedLanguage][component][text];
-  }
-
-  selectLanguage(lang: LanguageKey) {
-    this.selectedLanguage = lang;
-  }
-
-  changeLanguage() {
-    if (this.selectedLanguage == 'en') {
-      this.selectedLanguage = 'de';
+  getLanguage(section: Section, component: string) {
+    if (!this.activLanguage[section][component]) {
+      const availableComponents = Object.keys(this.activLanguage[section]);
+      console.log(`Verfügbare Komponenten: ${availableComponents.join(', ')}`);
+      throw new Error(`Komponente "${component}" nicht gefunden im Abschnitt "${section}". Verfügbare Komponenten: ${availableComponents.join(', ')}`);
+      // return null;
     } else {
-      this.selectedLanguage = 'en';
+      return this.activLanguage[section][component];
     }
   }
+
+  // getLanguage(component: ComponentKey, text: TextKey) {
+  //   return this.language[this.selectedLanguage][component][text];
+  // }
+
+  // selectLanguage(lang: LanguageKey) {
+  //   this.selectedLanguage = lang;
+  // }
+
+  // changeLanguage() {
+  //   if (this.selectedLanguage == 'en') {
+  //     this.selectedLanguage = 'de';
+  //   } else {
+  //     this.selectedLanguage = 'en';
+  //   }
+  // }
 }

@@ -7,35 +7,35 @@
 
             <a class="link" [routerLink]="''" fragment="about" (click)="clickLink(1)">
                 <div [ngStyle]="activLink === 1 ? { color: '#70e61c' } : null">
-                    {{getText('about')}}
+                    {{text.text?.[0]}}
                     <div [style.visibility]="(activLink == 1) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="skills" (click)="clickLink(2)">
                 <div [ngStyle]="activLink === 2 ? { color: '#70e61c' } : null">
-                    {{getText('skills')}}
+                    {{text.text?.[1]}}
                     <div [style.visibility]="(activLink == 2) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="portfolio" (click)="clickLink(3)">
                 <div [ngStyle]="activLink === 3 ? { color: '#70e61c' } : null">
-                    {{getText('portfolio')}}
+                    {{text.text?.[2]}}
                     <div [style.visibility]="(activLink == 3) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="contact" (click)="clickLink(4)">
                 <div [ngStyle]="activLink === 4 ? { color: '#70e61c' } : null">
-                    {{getText('contact')}}
+                    {{text.text?.[3]}}
                     <div [style.visibility]="(activLink == 4) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <div class="link language" (click)="clickLanguageMenu()">
                 <div>
-                    {{getText('language')}}
+                    {{text.text?.[4]}}
                 </div>
                 <div class="language-list" [class.open]="languageMenuOpen">
                     <div (click)="setLanguage('en')">EN</div>

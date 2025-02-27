@@ -13,13 +13,13 @@ export class LegalNoticeComponent {
   private languageService = inject(LanguageService);
   private componentKey: ComponentKey = 'legal';
 
-  // email = 'test';
+  email = 'test';
 
-  get email() {
-    return this.languageService.getLanguage('aboveTheFold', 'email')
-  }
+  // get email() {
+    // return this.languageService.getLanguage('aboveTheFold', 'email')
+  // }
 
   getText(text: TextKey) {
-    return this.languageService.getLanguage(this.componentKey, text);
+    // return this.languageService.getLanguage(this.componentKey, text);
   }
 }

@@ -9,7 +9,7 @@ const FOOTER: Paragraph = {
 }
 
 export const LAYOUT_DE = {
-    navbar: NAVBAR,
+    navBar: NAVBAR,
     footer: FOOTER,
 }
 

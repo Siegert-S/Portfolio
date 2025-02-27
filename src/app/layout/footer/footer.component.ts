@@ -15,6 +15,6 @@ export class FooterComponent {
   private componentKey: ComponentKey = 'footer';
 
   getText(text: TextKey) {
-    return this.languageService.getLanguage(this.componentKey, text);
+    // return this.languageService.getLanguage(this.componentKey, text);
   }
 }

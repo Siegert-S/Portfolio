@@ -15,6 +15,6 @@ export class AboutComponent {
   constructor() { }
 
   getText(text: TextKey) {
-    return this.languageService.getLanguage(this.componentKey, text);
+    // return this.languageService.getLanguage(this.componentKey, text);
   }
 }
