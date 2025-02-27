@@ -1,14 +1,14 @@
 import { Paragraph } from "../language.service";
 
 const NAVBAR: Paragraph = {
-    text: ['Über mich', 'Fähigkeiten', 'Portfolio', 'Kontakt', 'Sprache',]
+    text: ['About me', 'Skills', 'Portfolio', 'Contact', 'Language',]
 }
 
 const FOOTER: Paragraph = {
-    title: 'Impressum',
+    title: 'Legal Notice',
 }
 
-export const LAYOUT_DE = {
+export const LAYOUT_EN = {
     navbar: NAVBAR,
     footer: FOOTER,
 }

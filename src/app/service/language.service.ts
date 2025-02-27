@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
 import { PRIVACY_POLICY_DE } from './texts/privacy-policy.de';
 import { LEGAL_DE } from './texts/legal-notice.de';
+import { CONTENT_DE } from './texts/content.de';
+import { LAYOUT_DE } from './texts/layout.de';
+import { CONTENT_EN } from './texts/content.en';
+import { LAYOUT_EN } from './texts/layout.en';
+import { LEGAL_EN } from './texts/legal-notice.en';
+import { PRIVACY_POLICY_EN } from './texts/privacy-policy.en';
 
 export type Paragraph = {
   title?: string;
@@ -47,8 +53,22 @@ type Language = {
 })
 export class LanguageService {
 
-  test = PRIVACY_POLICY_DE;
-  test1 = LEGAL_DE;
+  languageText = {
+    de: {
+      content: CONTENT_DE,
+      layout: LAYOUT_DE,
+      legal: LEGAL_DE,
+      privacy: PRIVACY_POLICY_DE
+    },
+    en: {
+      content: CONTENT_EN,
+      layout: LAYOUT_EN,
+      legal: LEGAL_EN,
+      privacy: PRIVACY_POLICY_EN
+    }
+  }
+
+  activLanguage = this.languageText.en;
 
   selectedLanguage: LanguageKey = 'en';
 
@@ -230,10 +250,16 @@ export class LanguageService {
     },
   }
   constructor() {
-    console.log(this.test1);
-    console.log(Object.keys(this.test).length);
+    // console.log(this.languageText);
+    // console.log(Object.keys(this.languageText).length);
+    console.log(this.activLanguage);
 
 
+
+  }
+
+  setLanguage(language: LanguageKey) {
+    this.activLanguage = this.languageText[language];
   }
 
   getLanguage(component: ComponentKey, text: TextKey) {

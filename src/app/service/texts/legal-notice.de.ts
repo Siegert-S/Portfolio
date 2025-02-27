@@ -1,8 +1,6 @@
 import { Paragraph } from "../language.service";
 
-
-
-export const LEGAL_DE: Paragraph = {
+const LEGAL_NOTICE: Paragraph = {
     title: 'Impressum',
     text: [
         'Angaben gemäß § 5 TMG',
@@ -24,5 +22,9 @@ export const LEGAL_DE: Paragraph = {
         'von der',
         'Kanzlei',
     ],
+}
+
+export const LEGAL_DE = {
+    legalNotice: LEGAL_NOTICE,
 }
 
