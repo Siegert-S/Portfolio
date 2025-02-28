@@ -1,38 +1,21 @@
 import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from "./skill-icon/skill-icon.component";
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { LanguageService } from '../../../service/language.service';
+import { RouterModule } from '@angular/router';
+import { ComponentKey, LanguageService, Section } from '../../../service/language.service';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [SkillIconComponent, CommonModule],
+  imports: [SkillIconComponent, CommonModule, RouterModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
 
   private languageService = inject(LanguageService);
-
-  get title(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].skills.title!;
-  }
-  get introText(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].skills.introText!;
-  }
-  get questionFron(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].skills.questionFron!;
-  }
-  get questionBack(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].skills.questionBack!;
-  }
-  get callToAction(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].skills.callToAction!;
-  }
-  get bnt(): string {
-    return this.languageService.language[this.languageService.selectedLanguage].skills.button!;
-  }
+  private sectionKey: Section = 'content';
+  private componentKey: ComponentKey = 'skills';
 
   skillList = [
     { url: '../../../assets/img/html.svg', name: 'HTML' },
@@ -48,14 +31,16 @@ export class SkillsComponent {
     { url: '../../../assets/img/learning.svg', name: 'Continually learning' },
   ];
 
-  constructor(private router: Router) { }
-
-  scrollToContact() {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  getText(target: 'title' | number) {
+    const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
+    if (!paragraph) {
+      console.log('nicht vorhanden');
+      return null;
+    }
+    if (target === 'title') {
+      return paragraph.title;
+    } else {
+      return paragraph.text?.[target] ?? `Fehler: Kein Text für Index ${target} vorhanden.`;
     }
   }
-
-
 }

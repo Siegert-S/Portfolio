@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject, } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ComponentKey, LanguageService, TextKey } from '../../../service/language.service';
+import { ComponentKey, LanguageService, Section, TextKey } from '../../../service/language.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -15,6 +15,7 @@ import { RouterModule } from '@angular/router';
 export class ContactComponent {
 
   private languageService = inject(LanguageService);
+  private sectionKey: Section = 'content';
   private componentKey: ComponentKey = 'contact';
 
   http = inject(HttpClient);
@@ -90,7 +91,16 @@ export class ContactComponent {
     this.response = !this.response;
   }
 
-  getText(text: TextKey) {
-    // return this.languageService.getLanguage(this.componentKey, text);
+  getText(target: 'title' | number) {
+    const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
+    if (!paragraph) {
+      console.log('nicht vorhanden');
+      return null;
+    }
+    if (target === 'title') {
+      return paragraph.title;
+    } else {
+      return paragraph.text?.[target] ?? `Fehler: Kein Text für Index ${target} vorhanden.`;
+    }
   }
 }

@@ -6,6 +6,7 @@ const NAVBAR: Paragraph = {
 
 const FOOTER: Paragraph = {
     title: 'Legal Notice',
+    text: ['Kontakt@SaschaSiegert.de', '?subject=Interessiert%20an%20Zusammenarbeit']
 }
 
 export const LAYOUT_EN = {

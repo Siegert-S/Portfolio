@@ -231,7 +231,8 @@ const COOKIES: Paragraph = {
             der Nutzer zur Reichweitenmessung verwendet werden. Sofern wir Nutzern keine expliziten Angaben zur Art und
             Speicherdauer von Cookies mitteilen (z. B. im Rahmen der Einholung der Einwilligung), sollten Nutzer davon
             ausgehen, dass Cookies permanent sind und die Speicherdauer bis zu zwei Jahre betragen kann.`,
-        `Allgemeine Hinweise zum Widerruf und Widerspruch (sog. "Opt-Out"):`,
+        `Allgemeine Hinweise zum Widerruf und Widerspruch (sog. "Opt-Out"): `,
+        'und ',
         `Nutzer können die von ihnen
             abgegebenen Einwilligungen jederzeit widerrufen und der Verarbeitung entsprechend den gesetzlichen Vorgaben
             widersprechen. Hierzu können Nutzer unter anderem die Verwendung von Cookies in den Einstellungen ihres Browsers

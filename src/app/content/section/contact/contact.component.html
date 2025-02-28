@@ -6,49 +6,43 @@
     </div>
     <div class="text-wrapper">
         <div class="haedline">
-            <p>{{getText('contactHeading')}}</p>
+            <p>{{getText(0)}}</p>
             <div class="text-frame">
-                <span>{{getText('introText')}}</span>
-                <span>{{getText('callToAction')}}</span>
+                <span>{{getText(1)}}</span>
+                <span>{{getText(2)}}</span>
             </div>
         </div>
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
-            @if (response && isSuccsesfull) {
-            <div (click)="responsToUser()" class="user-response"> {{getText('confirmSubmit')}} </div>
-            }
-            @if (response && !isSuccsesfull) {
-            <div (click)="responsToUser()" class="user-response failure"> {{getText('errorSubmit')}} </div>
-            }
             <div class="form-div">
                 <label class="field-style" [class.invalid]="invalidityCheck('name')"
                     [class.valid]="validityCheck('name')">
-                    <input formControlName="name" type="text" required placeholder="{{getText('namePlaceholder')}}">
+                    <input formControlName="name" type="text" required placeholder="{{getText(3)}}">
                     @if (invalidityCheck('name')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('name')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>
                 <span class="error-message"
-                    [style.visibility]="invalidityCheck('name') ? 'visible':'hidden' ">{{getText('nameError')}}</span>
+                    [style.visibility]="invalidityCheck('name') ? 'visible':'hidden' ">{{getText(4)}}</span>
             </div>
             <div class="form-div">
                 <label class="field-style" [class.invalid]="invalidityCheck('email')"
                     [class.valid]="validityCheck('email')">
-                    <input formControlName="email" type="email" required placeholder="{{getText('emailPlaceholder')}}">
+                    <input formControlName="email" type="email" required placeholder="{{getText(5)}}">
                     @if (invalidityCheck('email')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('email')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>
                 <span class="error-message"
-                    [style.visibility]="invalidityCheck('email') ? 'visible':'hidden' ">{{getText('emailError')}}</span>
+                    [style.visibility]="invalidityCheck('email') ? 'visible':'hidden' ">{{getText(6)}}</span>
             </div>
             <div class="form-div">
                 <div>
                     <label class="field-style" [class.invalid]="invalidityCheck('message')"
                         [class.valid]="validityCheck('message')">
-                        <textarea formControlName="message" placeholder="{{getText('messagePlaceholder')}}"></textarea>
+                        <textarea formControlName="message" placeholder="{{getText(7)}}"></textarea>
                         @if (invalidityCheck('message')) { <img src="../../../assets/img/warning.svg" alt=""> }
                         @if (validityCheck('message')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                     </label>
                     <span class="error-message"
-                        [style.visibility]="invalidityCheck('message') ? 'visible':'hidden' ">{{getText('messageError')}}</span>
+                        [style.visibility]="invalidityCheck('message') ? 'visible':'hidden' ">{{getText(8)}}</span>
                 </div>
                 <div>
                     <div>
@@ -56,22 +50,27 @@
                             <input formControlName="privacy" type="checkbox">
                             <div></div>
                             <span>
-                                {{getText('priPolicyFront')}}
+                                {{getText(9)}}
                                 <a [routerLink]="'policy'">
-                                    {{getText('priPolicy')}}
+                                    {{getText(10)}}
                                 </a>
-                                {{getText('priPolicyBack')}}
+                                {{getText(11)}}
                             </span>
                         </label>
                         @if (form.get('privacy')?.invalid && (form.get('privacy')?.dirty || submitAttempt)) {<span
-                            class="error-message">{{getText('priPolicyError')}}</span>}
+                            class="error-message">{{getText(12)}}</span>}
                     </div>
                     <div class="submit-btn-frame">
-                        <input type="submit" [ngClass]="(form.valid) ? 'enable':'disable'"
-                            value="{{getText('button')}}">
+                        <input type="submit" [ngClass]="(form.valid) ? 'enable':'disable'" value="{{getText(13)}}">
                     </div>
                 </div>
             </div>
+            @if (response && isSuccsesfull) {
+            <div (click)="responsToUser()" class="user-response"> {{getText(14)}} </div>
+            }
+            @if (response && !isSuccsesfull) {
+            <div (click)="responsToUser()" class="user-response failure"> {{getText(15)}} </div>
+            }
         </form>
     </div>
     <div class="button-wrapper">

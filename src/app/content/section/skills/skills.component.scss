@@ -101,14 +101,17 @@
     align-self: center;
 }
 
-.bnt-frame{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 60px;
+.bnt-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
-button {
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--secondayrColor);
     width: 165px;
     height: 60px;
@@ -116,6 +119,7 @@ button {
     border: none;
     font-size: var(--fontSize7);
     text-align: center;
+    text-decoration: none;
     justify-self: end;
     margin-top: 20px;
     transition: all ease-in-out 100ms;

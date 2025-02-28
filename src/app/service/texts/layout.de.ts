@@ -5,7 +5,7 @@ const NAVBAR: Paragraph = {
 }
 
 const FOOTER: Paragraph = {
-    title: 'Impressum',
+    title: 'Impressum', text: ['Kontakt@SaschaSiegert.de', '?subject=Interessiert%20an%20Zusammenarbeit']
 }
 
 export const LAYOUT_DE = {

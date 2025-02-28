@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService, ComponentKey, TextKey } from '../service/language.service';
+import { LanguageService, ComponentKey, TextKey, Section } from '../service/language.service';
 
 @Component({
   selector: 'app-legal-notice',
@@ -11,15 +11,25 @@ import { LanguageService, ComponentKey, TextKey } from '../service/language.serv
 export class LegalNoticeComponent {
 
   private languageService = inject(LanguageService);
-  private componentKey: ComponentKey = 'legal';
+  private componentKey: ComponentKey = 'legalNotice';
+  private sectionKey: Section = 'legal';
 
   email = 'test';
 
   // get email() {
-    // return this.languageService.getLanguage('aboveTheFold', 'email')
+  // return this.languageService.getLanguage('aboveTheFold', 'email')
   // }
 
-  getText(text: TextKey) {
-    // return this.languageService.getLanguage(this.componentKey, text);
+  getText(target: 'title' | number) {
+    const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
+    if (!paragraph) {
+      console.log('nicht vorhanden');
+      return null;
+    }
+    if (target === 'title') {
+      return paragraph.title;
+    } else {
+      return paragraph.text?.[target] ?? `Fehler: Kein Text für Index ${target} vorhanden.`;
+    }
   }
 }

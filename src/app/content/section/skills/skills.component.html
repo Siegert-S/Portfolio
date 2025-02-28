@@ -8,12 +8,12 @@
 
     <div>
         <div class="titel">
-            <h2>{{title}}</h2>
+            <h2>{{getText('title')}}</h2>
             <div></div>
         </div>
         <div>
             <div class="titel-text">
-                <span>{{introText}} </span>
+                <span>{{getText(0)}} </span>
             </div>
         </div>
     </div>
@@ -22,17 +22,17 @@
         <div>
             <div class="highlight-text">
                 <span>
-                    {{questionFron}} <span style="color:var(--primaryColor) ;">{{questionBack}}</span> ?
+                    {{getText(1)}} <span style="color:var(--primaryColor) ;">{{getText(2)}}</span> ?
                 </span>
             </div>
             <div>
                 <span>
-                    {{callToAction}}
+                    {{getText(3)}}
                 </span>
             </div>
         </div>
         <div class="bnt-frame">
-            <button class="contact-bnt" (click)="scrollToContact()">{{bnt}}</button>
+            <a class="contact-bnt button" [routerLink]="''" fragment="contact">{{getText(4)}}</a>
         </div>
     </div>
 </div>

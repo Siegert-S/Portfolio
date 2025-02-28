@@ -65,7 +65,7 @@ const CONTACT: Paragraph = {
 }
 
 export const CONTENT_EN = {
-    AboveTheFold: ABOVE_THE_FOLD,
+    aboveTheFold: ABOVE_THE_FOLD,
     about: ABOUT,
     skills: SKILLS,
     portfolio: PORTFOLIO,

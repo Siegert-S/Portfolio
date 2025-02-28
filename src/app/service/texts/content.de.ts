@@ -8,7 +8,8 @@ const ABOVE_THE_FOLD: Paragraph = {
         'Lass uns reden!',
         'Kontakt@SaschaSiegert.de',
         '?subject=Interessiert%20an%20Zusammenarbeit',
-        'nach unten scrollen',],
+        'nach unten scrollen',
+    ],
 }
 
 const ABOUT: Paragraph = {
@@ -68,7 +69,7 @@ const CONTACT: Paragraph = {
 }
 
 export const CONTENT_DE = {
-    AboveTheFold: ABOVE_THE_FOLD,
+    aboveTheFold: ABOVE_THE_FOLD,
     about: ABOUT,
     skills: SKILLS,
     portfolio: PORTFOLIO,

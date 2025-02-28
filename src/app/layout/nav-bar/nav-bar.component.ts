@@ -13,19 +13,26 @@ import { RouterModule } from '@angular/router';
 export class NavBarComponent {
 
   private languageService = inject(LanguageService);
-  private componentKey: ComponentKey = 'navBar';
   private sectionKey: Section = 'layout';
-
-  text!: Paragraph;
+  private componentKey: ComponentKey = 'navBar';
 
   activLink = 0;
   burgerMenuOpen = false;
   languageMenuOpen = false;
 
-  constructor() {
-    this.text = this.languageService.getLanguage(this.sectionKey, this.componentKey);
-    console.log(this.text);
+  constructor() { }
 
+  getText(target: 'title' | number) {
+    const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
+    if (!paragraph) {
+      console.log('nicht vorhanden');
+      return null;
+    }
+    if (target === 'title') {
+      return paragraph.title;
+    } else {
+      return paragraph.text?.[target] ?? `Fehler: Kein Text für Index ${target} vorhanden.`;
+    }
   }
 
   clickLink(number: number) {
@@ -42,11 +49,8 @@ export class NavBarComponent {
   }
 
   setLanguage(lang: LanguageKey) {
-    this.languageService.setLanguage(lang);
+    this.languageService.selectLanguage(lang);
     this.languageMenuOpen = true;
   }
 
-  getText(text: TextKey) {
-    // return this.languageService.getLanguage(this.componentKey, text);
-  }
 }

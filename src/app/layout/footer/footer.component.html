@@ -2,7 +2,7 @@
     <div>
         <span>Sascha</span>
         <div>
-            <a [routerLink]="'legal'">{{getText('legal')}}</a>
+            <a [routerLink]="'legal'">{{getText('title')}}</a>
             <div class="vektor"></div>
         </div>
     </div>
@@ -13,7 +13,7 @@
         <a href="https://github.com/Siegert-S" target="_blank" rel="noopener noreferrer">
             <img src="../../../assets/img/github.svg" alt="">
         </a>
-        <a [href]="'mailto:' + getText('email') + getText('subject')">
+        <a [href]="'mailto:' + getText(0) + getText(1)">
             <img src="../../../assets/img/email.svg" alt="">
         </a>
         <a href="https://www.linkedin.com/in/sascha-siegert-092822350" target="_blank" rel="noopener noreferrer">
@@ -21,7 +21,7 @@
         </a>
     </div>
     <div>
-        <a href="">{{getText('legal')}}</a>
+        <a href="">{{getText('title')}}</a>
         <div class="vektor"></div>
     </div>
 </div>

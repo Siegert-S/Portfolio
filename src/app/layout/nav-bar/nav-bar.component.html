@@ -7,35 +7,35 @@
 
             <a class="link" [routerLink]="''" fragment="about" (click)="clickLink(1)">
                 <div [ngStyle]="activLink === 1 ? { color: '#70e61c' } : null">
-                    {{text.text?.[0]}}
+                    {{getText(0)}}
                     <div [style.visibility]="(activLink == 1) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="skills" (click)="clickLink(2)">
                 <div [ngStyle]="activLink === 2 ? { color: '#70e61c' } : null">
-                    {{text.text?.[1]}}
+                    {{getText(1)}}
                     <div [style.visibility]="(activLink == 2) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="portfolio" (click)="clickLink(3)">
                 <div [ngStyle]="activLink === 3 ? { color: '#70e61c' } : null">
-                    {{text.text?.[2]}}
+                    {{getText(2)}}
                     <div [style.visibility]="(activLink == 3) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <a class="link" [routerLink]="''" fragment="contact" (click)="clickLink(4)">
                 <div [ngStyle]="activLink === 4 ? { color: '#70e61c' } : null">
-                    {{text.text?.[3]}}
+                    {{getText(3)}}
                     <div [style.visibility]="(activLink == 4) ? 'visible':'hidden'" class="vector"></div>
                 </div>
             </a>
 
             <div class="link language" (click)="clickLanguageMenu()">
                 <div>
-                    {{text.text?.[4]}}
+                    {{getText(4)}}
                 </div>
                 <div class="language-list" [class.open]="languageMenuOpen">
                     <div (click)="setLanguage('en')">EN</div>

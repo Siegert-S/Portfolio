@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ProjectComponent } from "./project/project.component";
 import { CommonModule } from '@angular/common';
 import { ReferencesComponent } from "./references/references.component";
-import { LanguageService, ComponentKey, TextKey } from '../../../service/language.service';
+import { LanguageService, ComponentKey, TextKey, Section } from '../../../service/language.service';
 import { ProjectService } from '../../../service/project.service';
 
 @Component({
@@ -15,6 +15,7 @@ import { ProjectService } from '../../../service/project.service';
 export class PortfolioComponent {
 
   private languageService = inject(LanguageService);
+  private sectionKey: Section = 'content';
   private projectsService = inject(ProjectService);
 
   private componentKey: ComponentKey = 'portfolio';
@@ -23,7 +24,16 @@ export class PortfolioComponent {
 
   constructor() { }
 
-  getText(text: TextKey) {
-    // return this.languageService.getLanguage(this.componentKey, text);
+  getText(target: 'title' | number) {
+    const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
+    if (!paragraph) {
+      console.log('nicht vorhanden');
+      return null;
+    }
+    if (target === 'title') {
+      return paragraph.title;
+    } else {
+      return paragraph.text?.[target] ?? `Fehler: Kein Text für Index ${target} vorhanden.`;
+    }
   }
 }

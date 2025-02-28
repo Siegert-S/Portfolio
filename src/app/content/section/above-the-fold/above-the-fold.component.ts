@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { ComponentKey, LanguageService, TextKey } from '../../../service/language.service';
+import { ComponentKey, LanguageService, Section, TextKey } from '../../../service/language.service';
 
 @Component({
   selector: 'app-above-the-fold',
@@ -11,6 +11,7 @@ import { ComponentKey, LanguageService, TextKey } from '../../../service/languag
 export class AboveTheFoldComponent {
 
   private languageService = inject(LanguageService);
+  private sectionKey: Section = 'content';
   private componentKey: ComponentKey = 'aboveTheFold';
 
   scrollToContact() {
@@ -20,7 +21,16 @@ export class AboveTheFoldComponent {
     }
   }
 
-  getText(text: TextKey) {
-    // return this.languageService.getLanguage(this.componentKey, text);
+  getText(target: 'title' | number) {
+    const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
+    if (!paragraph) {
+      console.log('nicht vorhanden');
+      return null;
+    }
+    if (target === 'title') {
+      return paragraph.title;
+    } else {
+      return paragraph.text?.[target] ?? `Fehler: Kein Text für Index ${target} vorhanden.`;
+    }
   }
 }
