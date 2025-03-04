@@ -1,4 +1,4 @@
-.policy-wrapper{
+.policy-wrapper {
     margin-top: 10vh;
     // background-color: darkcyan;
     padding-left: 5vw;
@@ -7,10 +7,30 @@
     z-index: 1;
 }
 
-strong{
+strong {
     font-weight: 700;
 }
 
-.m-elements{
+.m-elements {
     background-color: rebeccapurple;
+}
+
+.highlight {
+    background-color: brown;
+}
+
+.index {
+    background-color: aquamarine;
+}
+
+.index-link {
+    background-color: beige;
+}
+
+.glossary {
+    background-color: burlywood;
+}
+
+.seal {
+    background-color: skyblue;
 }
