@@ -1,27 +1,29 @@
-<div class="footer-wrapper">
-    <div>
-        <span>Sascha</span>
+<section>
+    <div class="footer-wrapper">
+        <div>
+            <span>Sascha</span>
+            <div>
+                <a [routerLink]="'legal'">{{getText('title')}}</a>
+                <div class="vektor"></div>
+            </div>
+        </div>
+        <div>
+            © Sascha Siegert 2025
+        </div>
+        <div>
+            <a href="https://github.com/Siegert-S" target="_blank" rel="noopener noreferrer">
+                <img src="../../../assets/img/github.svg" alt="">
+            </a>
+            <a [href]="'mailto:' + getText(0) + getText(1)">
+                <img src="../../../assets/img/email.svg" alt="">
+            </a>
+            <a href="https://www.linkedin.com/in/sascha-siegert-092822350" target="_blank" rel="noopener noreferrer">
+                <img src="../../../assets/img/linkedin.svg" alt="">
+            </a>
+        </div>
         <div>
             <a [routerLink]="'legal'">{{getText('title')}}</a>
             <div class="vektor"></div>
         </div>
     </div>
-    <div>
-        © Sascha Siegert 2025
-    </div>
-    <div>
-        <a href="https://github.com/Siegert-S" target="_blank" rel="noopener noreferrer">
-            <img src="../../../assets/img/github.svg" alt="">
-        </a>
-        <a [href]="'mailto:' + getText(0) + getText(1)">
-            <img src="../../../assets/img/email.svg" alt="">
-        </a>
-        <a href="https://www.linkedin.com/in/sascha-siegert-092822350" target="_blank" rel="noopener noreferrer">
-            <img src="../../../assets/img/linkedin.svg" alt="">
-        </a>
-    </div>
-    <div>
-        <a href="">{{getText('title')}}</a>
-        <div class="vektor"></div>
-    </div>
-</div>
+</section>

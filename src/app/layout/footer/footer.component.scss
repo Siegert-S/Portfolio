@@ -1,3 +1,14 @@
+// section {
+//     position: sticky;
+//     bottom: 0;
+//     // left: 50%;
+//     width: 100vw;
+//     transform: translateX(calc(calc(100vw - 100%)/2));
+//     /* Verschiebe das Element nach links, damit es zentriert bleibt */
+//     // right: 0;
+//     z-index: 2;
+// }
+
 .footer-wrapper {
     background-color: var(--bgColor);
     border-top: 4px solid var(--secondayrColor);

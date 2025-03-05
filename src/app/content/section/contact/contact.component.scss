@@ -204,7 +204,8 @@ form {
     }
 
     div {
-        width: 24px;
+        // width: 24px;
+        aspect-ratio: 1/1;
         height: 24px;
         background-repeat: no-repeat;
         object-fit: contain;

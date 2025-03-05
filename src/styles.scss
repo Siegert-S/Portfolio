@@ -17,15 +17,25 @@
   // --fontSize8: 16px;
   // --fontSize9: 14px;
 
-  --fontSize1: 92px;
-  --fontSize2: 64px;
-  --fontSize3: 56px;
-  --fontSize4: 48px;
-  --fontSize5: 36px;
-  --fontSize6: 32px;
-  --fontSize7: 24px;
-  --fontSize8: 16px;
-  --fontSize9: 12px;
+  // --fontSize1: 92px;
+  // --fontSize2: 64px;
+  // --fontSize3: 56px;
+  // --fontSize4: 48px;
+  // --fontSize5: 36px;
+  // --fontSize6: 32px;
+  // --fontSize7: 24px;
+  // --fontSize8: 16px;
+  // --fontSize9: 12px;
+
+  --fontSize1: clamp(34px, 6vw, 92px);
+  --fontSize2: clamp(28px, 4.5vw, 64px);
+  --fontSize3: clamp(24px, 4vw, 56px);
+  --fontSize4: clamp(20px, 3.5vw, 48px);
+  --fontSize5: clamp(18px, 3vw, 36px);
+  --fontSize6: clamp(18px, 2.5vw, 32px);
+  --fontSize7: clamp(16px, 2vw, 24px);
+  --fontSize8: clamp(14px, 1.5vw, 16px);
+  --fontSize9: clamp(14px, 1vw, 14px);
 }
 
 * {
@@ -54,60 +64,63 @@ body {
 }
 
 app-root {
-  display: block;
-  max-width: 1440px;
+  display: flex;
+  justify-content: center;
+  // max-width: 1440px;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 14px;
   height: 10px;
-  display: none;
+  // display: none;
 }
 
-// ::-webkit-scrollbar-thumb {
-//   background-color: #9747ff;
-//   border-radius: 2px;
-// }
+::-webkit-scrollbar-thumb {
+  background-color: #9747ff;
+  border-radius: 8px;
+}
 
-// ::-webkit-scrollbar-track {
-//   background-color: #00000000;
-//   border: 1px solid #00000000;
-// }
+::-webkit-scrollbar-track {
+  background-color: #00000000;
+  border: 1px solid #00000000;
+}
 
 @media (max-width: 850px) {
   :root {
-    --fontSize1: calc(92px * 0.8);
-    --fontSize2: calc(64px * 0.8);
-    --fontSize3: calc(56px * 0.8);
-    --fontSize4: calc(48px * 0.8);
-    --fontSize5: calc(36px * 0.8);
-    --fontSize6: calc(32px * 0.8);
-    --fontSize7: calc(24px * 0.8);
-    --fontSize8: calc(16px * 0.8);
-    --fontSize9: calc(12px * 0.8);
+    // --fontSize1: calc(92px * 0.8);
+    // --fontSize2: calc(64px * 0.8);
+    // --fontSize3: calc(56px * 0.8);
+    // --fontSize4: calc(48px * 0.8);
+    // --fontSize5: calc(36px * 0.8);
+    // --fontSize6: calc(32px * 0.8);
+    // --fontSize7: calc(24px * 0.8);
+    // --fontSize8: calc(16px * 0.8);
+    // --fontSize9: calc(12px * 0.8);
   }
 }
 
 @media (max-width: 660px) {
   :root {
-    --fontSize1: calc(92px * 0.6);
-    --fontSize2: calc(64px * 0.6);
-    --fontSize3: calc(56px * 0.6);
-    --fontSize4: calc(48px * 0.6);
-    --fontSize5: calc(36px * 0.6);
-    --fontSize6: calc(32px * 0.6);
-    --fontSize7: calc(24px * 0.6);
-    --fontSize8: calc(16px * 0.6);
-    --fontSize9: calc(12px * 0.6);
+    // --fontSize1: calc(92px * 0.6);
+    // --fontSize2: calc(64px * 0.6);
+    // --fontSize3: calc(56px * 0.6);
+    // --fontSize4: calc(48px * 0.6);
+    // --fontSize5: calc(36px * 0.6);
+    // --fontSize6: calc(32px * 0.6);
+    // --fontSize7: calc(24px * 0.6);
+    // --fontSize8: calc(16px * 0.6);
+    // --fontSize9: calc(12px * 0.6);
   }
 }
 
 @media (max-width: 500px) {
   :root {
-    --fontSize1: calc(92px * 0.4);
-    --fontSize2: calc(64px * 0.4);
-    --fontSize3: calc(56px * 0.4);
+    // --fontSize1: calc(92px * 0.4);
+    // --fontSize2: calc(64px * 0.4);
+    // --fontSize3: calc(56px * 0.4);
     // --fontSize4: calc(48px * 0.4);
     // --fontSize5: calc(36px * 0.4);
     // --fontSize6: calc(32px * 0.4);
