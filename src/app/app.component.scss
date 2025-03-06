@@ -1,7 +1,5 @@
 .layout-wrapper {
-    // max-width: 1440px;
     width: 100%;
-    // background-color: maroon;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -11,7 +9,7 @@
 .shadow {
     position: absolute;
     z-index: 1;
-    opacity: 0.75;
+    opacity: 0.60;
 }
 
 .about {

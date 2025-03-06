@@ -6,7 +6,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    // padding-top: 12vh;
     position: relative;
     z-index: 2;
     overflow-y: hidden;
@@ -100,7 +99,6 @@ form {
 
 .form-div {
     width: 100%;
-    // height: 78px;
 }
 
 .user-response {
@@ -135,7 +133,6 @@ form {
     justify-content: space-between;
     max-width: 617px;
     width: 100%;
-    // height: 58px;
 
     &:hover,
     &:focus-within {
@@ -204,7 +201,6 @@ form {
     }
 
     div {
-        // width: 24px;
         aspect-ratio: 1/1;
         height: 24px;
         background-repeat: no-repeat;

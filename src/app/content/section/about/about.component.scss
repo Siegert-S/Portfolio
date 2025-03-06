@@ -4,7 +4,6 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    // overflow-x: hidden;
 }
 
 .text-wrapper {
@@ -40,7 +39,6 @@
 
     img {
         width: 80%;
-        // height: 100%;
         aspect-ratio: 1/1;
         object-fit: cover;
         border: 4px solid var(--secondayrColor);
@@ -51,7 +49,6 @@
 
 .vector {
     height: 0;
-    // width: 18.5%;
     width: 34%;
     border: 2px solid var(--secondayrColor);
 }

@@ -66,7 +66,6 @@ body {
 app-root {
   display: flex;
   justify-content: center;
-  // max-width: 1440px;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -87,50 +86,6 @@ app-root {
   background-color: #00000000;
   border: 1px solid #00000000;
 }
-
-@media (max-width: 850px) {
-  :root {
-    // --fontSize1: calc(92px * 0.8);
-    // --fontSize2: calc(64px * 0.8);
-    // --fontSize3: calc(56px * 0.8);
-    // --fontSize4: calc(48px * 0.8);
-    // --fontSize5: calc(36px * 0.8);
-    // --fontSize6: calc(32px * 0.8);
-    // --fontSize7: calc(24px * 0.8);
-    // --fontSize8: calc(16px * 0.8);
-    // --fontSize9: calc(12px * 0.8);
-  }
-}
-
-@media (max-width: 660px) {
-  :root {
-    // --fontSize1: calc(92px * 0.6);
-    // --fontSize2: calc(64px * 0.6);
-    // --fontSize3: calc(56px * 0.6);
-    // --fontSize4: calc(48px * 0.6);
-    // --fontSize5: calc(36px * 0.6);
-    // --fontSize6: calc(32px * 0.6);
-    // --fontSize7: calc(24px * 0.6);
-    // --fontSize8: calc(16px * 0.6);
-    // --fontSize9: calc(12px * 0.6);
-  }
-}
-
-@media (max-width: 500px) {
-  :root {
-    // --fontSize1: calc(92px * 0.4);
-    // --fontSize2: calc(64px * 0.4);
-    // --fontSize3: calc(56px * 0.4);
-    // --fontSize4: calc(48px * 0.4);
-    // --fontSize5: calc(36px * 0.4);
-    // --fontSize6: calc(32px * 0.4);
-    // --fontSize7: calc(24px * 0.4);
-    // --fontSize8: calc(16px * 0.4);
-    // --fontSize9: calc(12px * 0.4);
-  }
-}
-
-
 
 /* poppins-100 - latin */
 @font-face {
