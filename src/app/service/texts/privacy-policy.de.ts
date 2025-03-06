@@ -1,5 +1,10 @@
 import { Paragraph } from "../language.service";
 
+const PRIVACYINFO: Paragraph = {
+    title: 'Datenschutzerklärung',
+    text: ['kontakt@saschasiegert.de'],
+}
+
 const PREAMBLE: Paragraph = {
     title: 'Präambel',
     text: [
@@ -440,6 +445,7 @@ const DEFINITIONS: Paragraph = {
 }
 
 export const PRIVACY_POLICY_DE = {
+    privacyInfo: PRIVACYINFO,
     preamble: PREAMBLE,
     toc: TOC,
     responsible: RESPONSIBLE,

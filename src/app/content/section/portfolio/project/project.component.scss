@@ -1,8 +1,8 @@
 .project-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    margin-bottom: 80px;
+    padding: 0 5vw 80px 5vw;
 
     >:nth-child(1) {
         width: 55%;

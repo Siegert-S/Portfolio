@@ -1,14 +1,32 @@
 .policy-wrapper {
     margin-top: 10vh;
-    // background-color: darkcyan;
     padding-left: 5vw;
     padding-right: 5vw;
+    max-width: 1440px;
+    width: 100vw;
     position: relative;
     z-index: 1;
+    font-size: var(--fontSize7);
 }
 
-h2{
-    border-bottom: 4px solid var(--primaryColor);
+section{
+    padding-top: 10vh;
+}
+
+h1 {
+    font-size: var(--fontSize3);
+    font-weight: 700;
+}
+
+h2 {
+    border-bottom: 4px solid var(--primaryColor);    
+    font-size: var(--fontSize4);
+    font-weight: 700;
+}
+
+h3{
+    font-size: var(--fontSize5);
+    font-weight: 700;
 }
 
 strong {
@@ -16,25 +34,25 @@ strong {
 }
 
 .m-elements {
-    background-color: rebeccapurple;
+    // background-color: rebeccapurple;
 }
 
 .highlight {
-    background-color: brown;
+    // background-color: brown;
 }
 
 .index {
-    background-color: aquamarine;
+    // background-color: aquamarine;
 }
 
 .index-link {
-    background-color: beige;
+    // background-color: beige;
 }
 
 .glossary {
-    background-color: burlywood;
+    // background-color: burlywood;
 }
 
 .seal {
-    background-color: skyblue;
+    // background-color: skyblue;
 }

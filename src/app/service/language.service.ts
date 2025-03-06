@@ -35,12 +35,12 @@ export type TextKey =
   'providerFront' | 'providerBack' | 'represented' | 'law';
 
 export type ComponentKey =
-  'navBar'              | 'aboveTheFold'  | 'about'       | 'skills' |
-  'portfolio'           | 'contact'       | 'footer'      | 'legal' |
-  'legalNotice'         | 'preamble'      | 'toc'         | 'responsible' |
-  'processingOverview'  | 'legalBases'    | 'security'    | 'dataTransfer' |
-  'intlDataTransfers'   | 'dataDeletion'  | 'dataRights'  | 'cookies' |
-  'webHosting'          | 'contactMgmt'   | 'plugins'     | 'privacyUpdate' |
+  'navBar' | 'aboveTheFold' | 'about' | 'skills' |
+  'portfolio' | 'contact' | 'footer' | 'legal' |
+  'legalNotice' | 'privacyInfo' | 'preamble' | 'toc' | 'responsible' |
+  'processingOverview' | 'legalBases' | 'security' | 'dataTransfer' |
+  'intlDataTransfers' | 'dataDeletion' | 'dataRights' | 'cookies' |
+  'webHosting' | 'contactMgmt' | 'plugins' | 'privacyUpdate' |
   'definitions';
 
 @Injectable({

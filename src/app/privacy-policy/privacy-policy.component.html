@@ -1,183 +1,246 @@
 <div class="policy-wrapper">
-    <h1>Datenschutzerklärung</h1>
-    <h2 id="m716"> {{getText('preamble','title')}} </h2>
-    <p>{{getText('preamble',0)}}</p>
-    <p>{{getText('preamble',1)}}</p>
+    <h1>{{getText('privacyInfo','title')}}</h1>
+    <section id="preamble">
+        <h2> {{getText('preamble','title')}} </h2>
+        <p>{{getText('preamble',0)}}</p>
+        <p>{{getText('preamble',1)}}</p>
+        <p>{{getText('preamble',2)}}</p>
+    </section>
 
-    <p>{{getText('preamble',2)}}</p>
-    <h2>{{getText('toc','title')}}</h2>
-    <ul class="index">
-        <li><a class="index-link" href="#m716">{{getText('preamble','title')}}</a></li>
-        <li><a class="index-link" href="#m3">{{getText('responsible','title')}}</a></li>
-        <li><a class="index-link" href="#mOverview">{{getText('processingOverview','title')}}</a></li>
-        <li><a class="index-link" href="#m2427">{{getText('legalBases','title')}}</a></li>
-        <li><a class="index-link" href="#m27">{{getText('security','title')}}</a></li>
-        <li><a class="index-link" href="#m25">{{getText('dataTransfer','title')}}</a></li>
-        <li><a class="index-link" href="#m24">{{getText('intlDataTransfers','title')}}</a></li>
-        <li><a class="index-link" href="#m12">{{getText('dataDeletion','title')}}</a></li>
-        <li><a class="index-link" href="#m10">{{getText('dataRights','title')}}</a></li>
-        <li><a class="index-link" href="#m134">{{getText('cookies','title')}}</a></li>
-        <li><a class="index-link" href="#m225">{{getText('webHosting','title')}}</a></li>
-        <li><a class="index-link" href="#m182">{{getText('contactMgmt','title')}}</a></li>
-        <li><a class="index-link" href="#m328">{{getText('plugins','title')}}</a></li>
-        <li><a class="index-link" href="#m15">{{getText('privacyUpdate','title')}}</a></li>
-        <li><a class="index-link" href="#m42">{{getText('definitions','title')}}</a></li>
-    </ul>
-    <h2 id="m3">{{getText('responsible','title')}}</h2>
-    <p>Siegert Sascha<br>Ravensberger Weg 11<br>53840<br>Troisdorf</p>
-    <!-- E-Mail-Adresse: <p><a href="mailto:{{email}}"> {{email}} </a></p> -->
+    <section>
+        <h2>{{getText('toc','title')}}</h2>
+        <ul class="index">
+            <li><a class="index-link" [routerLink]="'/policy'" fragment="preamble">{{getText('preamble','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="responsible">{{getText('responsible','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="overviwe">{{getText('processingOverview','title')}}</a></li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="legalBases">{{getText('legalBases','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'" fragment="security">{{getText('security','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="dataTransfer">{{getText('dataTransfer','title')}}</a></li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="intlDataTransfers">{{getText('intlDataTransfers','title')}}</a></li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="dataDeletion">{{getText('dataDeletion','title')}}</a></li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="dataRights">{{getText('dataRights','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'" fragment="cookies">{{getText('cookies','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="webHosting">{{getText('webHosting','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="contactMgmt">{{getText('contactMgmt','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'" fragment="plugins">{{getText('plugins','title')}}</a>
+            </li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="privacyUpdate">{{getText('privacyUpdate','title')}}</a></li>
+            <li><a class="index-link" [routerLink]="'/policy'"
+                    fragment="definitions">{{getText('definitions','title')}}</a>
+            </li>
+        </ul>
+    </section>
 
-    <h2 id="mOverview">{{getText('processingOverview','title')}}</h2>
-    <p>{{getText('processingOverview',0)}}</p>
-    <h3>{{getText('processingOverview',1)}}</h3>
-    <ul>
-        <li>{{getText('processingOverview',2)}}</li>
-        <li>{{getText('processingOverview',3)}}</li>
-        <li>{{getText('processingOverview',4)}}</li>
-        <li>{{getText('processingOverview',5)}}</li>
-    </ul>
-    <h3>{{getText('processingOverview',6)}}</h3>
-    <ul>
-        <li>{{getText('processingOverview',7)}}</li>
-        <li>{{getText('processingOverview',8)}}</li>
-    </ul>
-    <h3>{{getText('processingOverview',9)}}</h3>
-    <ul>
-        <li>{{getText('processingOverview',10)}}</li>
-        <li>{{getText('processingOverview',11)}}</li>
-        <li>{{getText('processingOverview',12)}}</li>
-        <li>{{getText('processingOverview',13)}}</li>
-        <li>{{getText('processingOverview',14)}}</li>
-        <li>{{getText('processingOverview',15)}}</li>
-    </ul>
-    <h2 id="m2427">{{getText('legalBases','title')}}</h2>
-    <p><strong>{{getText('legalBases',0)}}</strong>{{getText('legalBases',1)}}</p>
-    <ul>
-        <li><strong>{{getText('legalBases',2)}}</strong> {{getText('legalBases',3)}}</li>
-        <li><strong>{{getText('legalBases',4)}}</strong> {{getText('legalBases',5)}}</li>
-        <li><strong>{{getText('legalBases',6)}}</strong> {{getText('legalBases',7)}}</li>
-    </ul>
-    <p><strong>{{getText('legalBases',8)}}</strong>{{getText('legalBases',9)}}</p>
+    <section id="responsible">
+        <h2>{{getText('responsible','title')}}</h2>
+        <p>Siegert Sascha<br>Ravensberger Weg 11<br>53840<br>Troisdorf</p>
+        E-Mail-Adresse: <p><a href="mailto:{{getText('privacyInfo',0)}}"> {{getText('privacyInfo',0)}} </a></p>
+    </section>
 
-    <h2 id="m27">{{getText('security','title')}}</h2>
-    <p>{{getText('security',0)}}</p>
-    <p>{{getText('security',1)}}</p>
-    <p>{{getText('security',2)}}</p>
+    <section id="overviwe">
+        <h2>{{getText('processingOverview','title')}}</h2>
+        <p>{{getText('processingOverview',0)}}</p>
+        <h3>{{getText('processingOverview',1)}}</h3>
+        <ul>
+            <li>{{getText('processingOverview',2)}}</li>
+            <li>{{getText('processingOverview',3)}}</li>
+            <li>{{getText('processingOverview',4)}}</li>
+            <li>{{getText('processingOverview',5)}}</li>
+        </ul>
+        <h3>{{getText('processingOverview',6)}}</h3>
+        <ul>
+            <li>{{getText('processingOverview',7)}}</li>
+            <li>{{getText('processingOverview',8)}}</li>
+        </ul>
+        <h3>{{getText('processingOverview',9)}}</h3>
+        <ul>
+            <li>{{getText('processingOverview',10)}}</li>
+            <li>{{getText('processingOverview',11)}}</li>
+            <li>{{getText('processingOverview',12)}}</li>
+            <li>{{getText('processingOverview',13)}}</li>
+            <li>{{getText('processingOverview',14)}}</li>
+            <li>{{getText('processingOverview',15)}}</li>
+        </ul>
+    </section>
 
-    <h2 id="m25">{{getText('dataTransfer','title')}}</h2>
-    <p>{{getText('dataTransfer',0)}}</p>
+    <section id="legalBases">
+        <h2>{{getText('legalBases','title')}}</h2>
+        <p><strong>{{getText('legalBases',0)}}</strong>{{getText('legalBases',1)}}</p>
+        <ul>
+            <li><strong>{{getText('legalBases',2)}}</strong> {{getText('legalBases',3)}}</li>
+            <li><strong>{{getText('legalBases',4)}}</strong> {{getText('legalBases',5)}}</li>
+            <li><strong>{{getText('legalBases',6)}}</strong> {{getText('legalBases',7)}}</li>
+        </ul>
+        <p><strong>{{getText('legalBases',8)}}</strong>{{getText('legalBases',9)}}</p>
+    </section>
 
-    <h2 id="m24">{{getText('intlDataTransfers','title')}}</h2>
-    <p>{{getText('intlDataTransfers',0)}}<a
-            href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection_de"
-            target="_blank">https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection_de.</a>
-    </p>
-    <p>{{getText('intlDataTransfers',1)}} <a href="https://www.dataprivacyframework.gov/"
-            target="_blank">https://www.dataprivacyframework.gov/</a>{{getText('intlDataTransfers',2)}}</p>
+    <section id="security">
+        <h2>{{getText('security','title')}}</h2>
+        <p>{{getText('security',0)}}</p>
+        <p>{{getText('security',1)}}</p>
+        <p>{{getText('security',2)}}</p>
+    </section>
 
-    <h2 id="m12">{{getText('dataDeletion','title')}}</h2>
-    <p>{{getText('dataDeletion',0)}}</p>
+    <section id="dataTransfer">
+        <h2>{{getText('dataTransfer','title')}}</h2>
+        <p>{{getText('dataTransfer',0)}}</p>
+    </section>
 
-    <h2 id="m10">{{getText('dataRights','title')}}</h2>
-    <p>{{getText('dataRights',0)}}</p>
-    <ul>
-        <li><strong>{{getText('dataRights',1)}}</strong></li>
-        <li><strong>{{getText('dataRights',2)}}</strong> {{getText('dataRights',3)}}</li>
-        <li><strong>{{getText('dataRights',4)}}</strong> {{getText('dataRights',5)}}</li>
-        <li><strong>{{getText('dataRights',6)}}</strong> {{getText('dataRights',7)}}</li>
-        <li><strong>{{getText('dataRights',8)}}</strong> {{getText('dataRights',9)}}</li>
-        <li><strong>{{getText('dataRights',10)}}</strong> {{getText('dataRights',11)}}</li>
-        <li><strong>{{getText('dataRights',12)}}</strong> {{getText('dataRights',13)}}</li>
-    </ul>
+    <section id="intlDataTransfers">
+        <h2>{{getText('intlDataTransfers','title')}}</h2>
+        <p>{{getText('intlDataTransfers',0)}}
+            <a href="https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection_de"
+                target="_blank">https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection_de.</a>
+        </p>
+        <p>{{getText('intlDataTransfers',1)}} <a href="https://www.dataprivacyframework.gov/"
+                target="_blank">https://www.dataprivacyframework.gov/</a>{{getText('intlDataTransfers',2)}}</p>
+    </section>
 
-    <h2 id="m134">{{getText('cookies','title')}}</h2>
-    <p>{{getText('cookies',0)}} </p>
-    <p><strong>{{getText('cookies',1)}} </strong>{{getText('cookies',2)}}</p>
-    <p><strong>{{getText('cookies',3)}} </strong>{{getText('cookies',4)}}</p>
-    <p><strong>{{getText('cookies',5)}}</strong>{{getText('cookies',6)}}</p>
-    <ul>
-        <li><strong>{{getText('cookies',7)}}</strong>{{getText('cookies',8)}}</li>
-        <li><strong>{{getText('cookies',9)}}</strong> {{getText('cookies',10)}}</li>
-    </ul>
-    <p><strong>{{getText('cookies',11)}}</strong>{{getText('cookies',12)}}
-        <a href="https://optout.aboutads.info/" target="_new">https://optout.aboutads.info</a>
-        {{getText('cookies',13)}}
-        <a href="https://www.youronlinechoices.com/" target="_new">https://www.youronlinechoices.com/</a>
-        {{getText('cookies',14)}}
-    </p>
-    <ul class="m-elements">
-        <li class=""><strong>{{getText('cookies',15)}}</strong> {{getText('cookies',16)}}</li>
-    </ul>
-    <p><strong>{{getText('cookies',17)}}</strong></p>
-    <ul class="m-elements">
-        <li><strong>{{getText('cookies',18)}}</strong>{{getText('cookies',19)}}
-            <span class=""><strong>{{getText('cookies',20)}}</strong> {{getText('cookies',21)}}</span>
-        </li>
-    </ul>
-    <h2 id="m225">{{getText('webHosting','title')}}</h2>
-    <p>{{getText('webHosting',0)}}</p>
-    <ul class="m-elements">
-        <li><strong>{{getText('webHosting',1)}}</strong> {{getText('webHosting',2)}}</li>
-        <li><strong>{{getText('webHosting',3)}}</strong> {{getText('webHosting',4)}}</li>
-        <li><strong>{{getText('webHosting',5)}}</strong> {{getText('webHosting',6)}}</li>
-        <li class=""><strong>{{getText('webHosting',7)}}</strong> {{getText('webHosting',8)}}</li>
-    </ul>
-    <p><strong>{{getText('webHosting',9)}}</strong></p>
-    <ul class="m-elements">
-        <li><strong>{{getText('webHosting',10)}}</strong>{{getText('webHosting',11)}}<span
-                class=""><strong>{{getText('webHosting',12)}}</strong> {{getText('webHosting',13)}}</span></li>
-        <li><strong>{{getText('webHosting',14)}}</strong>{{getText('webHosting',15)}}
-            <span class=""><strong>{{getText('webHosting',16)}}</strong>{{getText('webHosting',17)}}</span>
-            <strong>{{getText('webHosting',18)}}</strong>{{getText('webHosting',19)}}
-        </li>
-    </ul>
-    <h2 id="m182">{{getText('contactMgmt','title')}}</h2>
-    <p>{{getText('contactMgmt',0)}}</p>
-    <ul class="m-elements">
-        <li><strong>{{getText('contactMgmt',1)}}</strong> {{getText('contactMgmt',2)}}</li>
-        <li><strong>{{getText('contactMgmt',3)}}</strong> {{getText('contactMgmt',4)}}</li>
-        <li><strong>{{getText('contactMgmt',5)}}</strong> {{getText('contactMgmt',6)}}</li>
-        <li class=""><strong>{{getText('contactMgmt',7)}}</strong> {{getText('contactMgmt',8)}}</li>
-    </ul>
-    <p><strong>{{getText('contactMgmt',9)}}</strong></p>
-    <ul class="m-elements">
-        <li><strong>{{getText('contactMgmt',10)}}</strong>{{getText('contactMgmt',11)}}
-            <span class=""><strong>{{getText('contactMgmt',12)}}</strong> {{getText('contactMgmt',13)}}</span>
-        </li>
-    </ul>
-    <h2 id="m328">{{getText('plugins','title')}}</h2>
-    <p>{{getText('plugins',0)}}</p>
-    <p>{{getText('plugins',1)}}</p>
-    <ul class="m-elements">
-        <li><strong>{{getText('plugins',2)}}</strong> {{getText('plugins',3)}}</li>
-        <li><strong>{{getText('plugins',4)}}</strong>{{getText('plugins',5)}}</li>
-        <li><strong>{{getText('plugins',6)}}</strong> {{getText('plugins',7)}}</li>
-        <li class=""><strong>{{getText('plugins',8)}}</strong> {{getText('plugins',9)}}</li>
-    </ul>
-    <p><strong>{{getText('plugins',10)}}</strong></p>
-    <ul class="m-elements">
-        <li><strong>{{getText('plugins',11)}}</strong>{{getText('plugins',12)}}
-            <strong>{{getText('plugins',13)}}</strong> {{getText('plugins',14)}}
-            <span class=""><strong>{{getText('plugins',15)}}</strong> {{getText('plugins',16)}}
-            </span><strong>{{getText('plugins',17)}}</strong> <a href="https://fonts.google.com/"
-                target="_blank">https://fonts.google.com/</a>; <strong>{{getText('plugins',18)}}</strong> <a
-                href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>;
-            <strong>{{getText('plugins',19)}}</strong> <span class=""> {{getText('plugins',20)}}</span>.
-            <strong>{{getText('plugins',21)}}</strong> <a href="https://developers.google.com/fonts/faq/privacy?hl=de"
-                target="_blank">https://developers.google.com/fonts/faq/privacy?hl=de</a>.
-        </li>
-    </ul>
-    <h2 id="m15">{{getText('privacyUpdate','title')}}</h2>
-    <p>{{getText('privacyUpdate',0)}}</p>
-    <p>{{getText('privacyUpdate',1)}}</p>
+    <section id="dataDeletion">
+        <h2>{{getText('dataDeletion','title')}}</h2>
+        <p>{{getText('dataDeletion',0)}}</p>
+    </section>
 
-    <h2 id="m42">{{getText('definitions','title')}}</h2>
-    <p>{{getText('definitions',0)}}</p>
-    <ul class="glossary">
-        <li><strong>{{getText('definitions',1)}}</strong> {{getText('definitions',2)}}</li>
-        <li><strong>{{getText('definitions',3)}}</strong> {{getText('definitions',4)}} </li>
-        <li><strong>{{getText('definitions',5)}}</strong> {{getText('definitions',6)}}</li>
-    </ul>
+    <section id="dataRights">
+        <h2>{{getText('dataRights','title')}}</h2>
+        <p>{{getText('dataRights',0)}}</p>
+        <ul>
+            <li><strong>{{getText('dataRights',1)}}</strong></li>
+            <li><strong>{{getText('dataRights',2)}}</strong> {{getText('dataRights',3)}}</li>
+            <li><strong>{{getText('dataRights',4)}}</strong> {{getText('dataRights',5)}}</li>
+            <li><strong>{{getText('dataRights',6)}}</strong> {{getText('dataRights',7)}}</li>
+            <li><strong>{{getText('dataRights',8)}}</strong> {{getText('dataRights',9)}}</li>
+            <li><strong>{{getText('dataRights',10)}}</strong> {{getText('dataRights',11)}}</li>
+            <li><strong>{{getText('dataRights',12)}}</strong> {{getText('dataRights',13)}}</li>
+        </ul>
+    </section>
+
+    <section id="cookies">
+        <h2>{{getText('cookies','title')}}</h2>
+        <p>{{getText('cookies',0)}} </p>
+        <p><strong>{{getText('cookies',1)}} </strong>{{getText('cookies',2)}}</p>
+        <p><strong>{{getText('cookies',3)}} </strong>{{getText('cookies',4)}}</p>
+        <p><strong>{{getText('cookies',5)}}</strong>{{getText('cookies',6)}}</p>
+        <ul>
+            <li><strong>{{getText('cookies',7)}}</strong>{{getText('cookies',8)}}</li>
+            <li><strong>{{getText('cookies',9)}}</strong> {{getText('cookies',10)}}</li>
+        </ul>
+        <p><strong>{{getText('cookies',11)}}</strong>{{getText('cookies',12)}}
+            <a href="https://optout.aboutads.info/" target="_new">https://optout.aboutads.info</a>
+            {{getText('cookies',13)}}
+            <a href="https://www.youronlinechoices.com/" target="_new">https://www.youronlinechoices.com/</a>
+            {{getText('cookies',14)}}
+        </p>
+        <ul class="m-elements">
+            <li class="highlight"><strong>{{getText('cookies',15)}}</strong> {{getText('cookies',16)}}</li>
+        </ul>
+        <p><strong>{{getText('cookies',17)}}</strong></p>
+        <ul class="m-elements">
+            <li><strong>{{getText('cookies',18)}}</strong>{{getText('cookies',19)}}
+                <span class="highlight"><strong>{{getText('cookies',20)}}</strong> {{getText('cookies',21)}}</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="webHosting">
+        <h2>{{getText('webHosting','title')}}</h2>
+        <p>{{getText('webHosting',0)}}</p>
+        <ul class="m-elements">
+            <li><strong>{{getText('webHosting',1)}}</strong> {{getText('webHosting',2)}}</li>
+            <li><strong>{{getText('webHosting',3)}}</strong> {{getText('webHosting',4)}}</li>
+            <li><strong>{{getText('webHosting',5)}}</strong> {{getText('webHosting',6)}}</li>
+            <li class="highlight"><strong>{{getText('webHosting',7)}}</strong> {{getText('webHosting',8)}}</li>
+        </ul>
+        <p><strong>{{getText('webHosting',9)}}</strong></p>
+        <ul class="m-elements">
+            <li><strong>{{getText('webHosting',10)}}</strong>{{getText('webHosting',11)}}<span
+                    class="highlight"><strong>{{getText('webHosting',12)}}</strong> {{getText('webHosting',13)}}</span>
+            </li>
+            <li><strong>{{getText('webHosting',14)}}</strong>{{getText('webHosting',15)}}
+                <span class="highlight"><strong>{{getText('webHosting',16)}}</strong>{{getText('webHosting',17)}}</span>
+                <strong>{{getText('webHosting',18)}}</strong>{{getText('webHosting',19)}}
+            </li>
+        </ul>
+    </section>
+
+    <section id="contactMgmt">
+        <h2>{{getText('contactMgmt','title')}}</h2>
+        <p>{{getText('contactMgmt',0)}}</p>
+        <ul class="m-elements">
+            <li><strong>{{getText('contactMgmt',1)}}</strong> {{getText('contactMgmt',2)}}</li>
+            <li><strong>{{getText('contactMgmt',3)}}</strong> {{getText('contactMgmt',4)}}</li>
+            <li><strong>{{getText('contactMgmt',5)}}</strong> {{getText('contactMgmt',6)}}</li>
+            <li class="highlight"><strong>{{getText('contactMgmt',7)}}</strong> {{getText('contactMgmt',8)}}</li>
+        </ul>
+        <p><strong>{{getText('contactMgmt',9)}}</strong></p>
+        <ul class="m-elements">
+            <li><strong>{{getText('contactMgmt',10)}}</strong>{{getText('contactMgmt',11)}}
+                <span class="highlight"><strong>{{getText('contactMgmt',12)}}</strong>
+                    {{getText('contactMgmt',13)}}</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="plugins">
+        <h2>{{getText('plugins','title')}}</h2>
+        <p>{{getText('plugins',0)}}</p>
+        <p>{{getText('plugins',1)}}</p>
+        <ul class="m-elements">
+            <li><strong>{{getText('plugins',2)}}</strong> {{getText('plugins',3)}}</li>
+            <li><strong>{{getText('plugins',4)}}</strong>{{getText('plugins',5)}}</li>
+            <li><strong>{{getText('plugins',6)}}</strong> {{getText('plugins',7)}}</li>
+            <li class="highlight"><strong>{{getText('plugins',8)}}</strong> {{getText('plugins',9)}}</li>
+        </ul>
+        <p><strong>{{getText('plugins',10)}}</strong></p>
+        <ul class="m-elements">
+            <li><strong>{{getText('plugins',11)}}</strong>{{getText('plugins',12)}}
+                <strong>{{getText('plugins',13)}}</strong> {{getText('plugins',14)}}
+                <span class="highlight"><strong>{{getText('plugins',15)}}</strong> {{getText('plugins',16)}}
+                </span><strong>{{getText('plugins',17)}}</strong> <a href="https://fonts.google.com/"
+                    target="_blank">https://fonts.google.com/</a>; <strong>{{getText('plugins',18)}}</strong>
+                <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>;
+                <strong>{{getText('plugins',19)}}</strong> <span class="highlight"> {{getText('plugins',20)}}</span>.
+                <strong>{{getText('plugins',21)}}</strong>
+                <a href="https://developers.google.com/fonts/faq/privacy?hl=de"
+                    target="_blank">https://developers.google.com/fonts/faq/privacy?hl=de</a>.
+            </li>
+        </ul>
+    </section>
+
+    <section id="privacyUpdate">
+        <h2>{{getText('privacyUpdate','title')}}</h2>
+        <p>{{getText('privacyUpdate',0)}}</p>
+        <p>{{getText('privacyUpdate',1)}}</p>
+    </section>
+
+    <section id="definitions">
+        <h2>{{getText('definitions','title')}}</h2>
+        <p>{{getText('definitions',0)}}</p>
+        <ul class="glossary">
+            <li><strong>{{getText('definitions',1)}}</strong> {{getText('definitions',2)}}</li>
+            <li><strong>{{getText('definitions',3)}}</strong> {{getText('definitions',4)}} </li>
+            <li><strong>{{getText('definitions',5)}}</strong> {{getText('definitions',6)}}</li>
+        </ul>
+    </section>
+
     <p class="seal"><a href="https://datenschutz-generator.de/"
             title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." target="_blank"
             rel="noopener noreferrer nofollow">{{getText('definitions',7)}}</a></p>
