@@ -26,16 +26,18 @@
         >.vektor {
             border: 2px solid var(--primaryColor);
             border-radius: 2px 0 0 2px;
-            width: 100px;
+            // width: 100px;
+            flex-grow: 1;
         }
 
         >.vektorBig {
             border: 2px solid var(--primaryColor);
-            width: 500px;
+            // width: 500px;
+            flex-grow: 5;
         }
     }
 
-    >:nth-child(2){
+    >:nth-child(2) {
         width: 90%;
         margin-bottom: 5%;
         text-align: center;
@@ -46,6 +48,6 @@
     }
 }
 
-.reference-frame{
+.reference-frame {
     width: 100%;
 }

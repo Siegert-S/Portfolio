@@ -1,27 +1,24 @@
-// section {
-//     position: sticky;
-//     bottom: 0;
-//     // left: 50%;
-//     width: 100vw;
-//     transform: translateX(calc(calc(100vw - 100%)/2));
-//     /* Verschiebe das Element nach links, damit es zentriert bleibt */
-//     // right: 0;
-//     z-index: 2;
-// }
+section {
 
-.footer-wrapper {
     background-color: var(--bgColor);
     border-top: 4px solid var(--secondayrColor);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    padding: 66px 0 70px 0;
+    width: 100vw;
     position: sticky;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 66px 5vw 70px 5vw;
 
     >:nth-child(1) {
         display: flex;
