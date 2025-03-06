@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { ComponentKey, LanguageService, Section, TextKey } from '../../../service/language.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
@@ -14,12 +15,12 @@ export class AboveTheFoldComponent {
   private sectionKey: Section = 'content';
   private componentKey: ComponentKey = 'aboveTheFold';
 
-  scrollToContact() {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
+  // scrollToContact() {
+  //   const element = document.getElementById('contact');
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //   }
+  // }
 
   getText(target: 'title' | number) {
     const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);

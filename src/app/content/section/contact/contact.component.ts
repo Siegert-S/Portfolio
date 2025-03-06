@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, inject, } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, ViewChild, } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ComponentKey, LanguageService, Section, TextKey } from '../../../service/language.service';
-import { RouterModule } from '@angular/router';
+import { ComponentKey, LanguageService, Section } from '../../../service/language.service';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +12,11 @@ import { RouterModule } from '@angular/router';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
+  @ViewChild('firstField') firstField!: ElementRef;
+
+  private router = inject(Router);
+  private route = inject(ActivatedRoute);
 
   private languageService = inject(LanguageService);
   private sectionKey: Section = 'content';
@@ -44,6 +48,24 @@ export class ContactComponent {
   };
 
   constructor() { }
+
+  ngAfterViewInit(): void {
+    this.router.events.subscribe(() => {
+      this.route.fragment.subscribe(fragment => {
+        if (fragment === 'contact') {
+          this.setFocus();
+        }
+      })
+    })
+  }
+
+  setFocus() {
+    if (this.firstField) {
+      setTimeout(() => {
+        this.firstField.nativeElement.focus();
+      }, 0);
+    }
+  }
 
   onSubmit() {
     this.submitAttempt = true;

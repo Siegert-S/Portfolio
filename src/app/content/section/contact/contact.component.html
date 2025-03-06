@@ -16,7 +16,7 @@
             <div class="form-div">
                 <label class="field-style" [class.invalid]="invalidityCheck('name')"
                     [class.valid]="validityCheck('name')">
-                    <input formControlName="name" type="text" required placeholder="{{getText(3)}}">
+                    <input #firstField formControlName="name" type="text" required placeholder="{{getText(3)}}">
                     @if (invalidityCheck('name')) { <img src="../../../assets/img/warning.svg" alt=""> }
                     @if (validityCheck('name')) { <img src="../../../assets/img/confirm.svg" alt=""> }
                 </label>

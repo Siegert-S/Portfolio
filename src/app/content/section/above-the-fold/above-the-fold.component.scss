@@ -69,7 +69,7 @@
             z-index: 1;
 
             >:nth-child(1) {
-                width: 100px;
+                width: calc(5vw - 32px);
                 border: 2px solid var(--primaryColor);
                 border-radius: 0 2px 2px 0;
             }
@@ -146,14 +146,17 @@
                 }
             }
 
-            button {
+            .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: var(--secondayrColor);
                 width: 165px;
                 height: 60px;
                 border-radius: 10px;
                 border: none;
                 font-size: var(--fontSize7);
-                text-align: center;
+                text-decoration: none;
                 transition: all ease-in-out 100ms;
                 margin-top: 16px;
 
