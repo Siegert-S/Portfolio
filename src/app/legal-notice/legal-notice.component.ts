@@ -14,7 +14,7 @@ export class LegalNoticeComponent {
   private componentKey: ComponentKey = 'legalNotice';
   private sectionKey: Section = 'legal';
 
-  email = 'test';
+  email = 'Kontakt@SaschaSiegert.de';
 
   // get email() {
   // return this.languageService.getLanguage('aboveTheFold', 'email')

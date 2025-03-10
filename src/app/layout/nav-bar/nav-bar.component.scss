@@ -17,7 +17,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 5vw 37px 5vw ;
+    padding: 37px 5vw 37px 5vw;
     box-sizing: border-box;
 }
 
@@ -48,6 +48,30 @@ nav {
         }
 
     }
+}
+
+.language-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid;
+    border-radius: 8px;
+    overflow: hidden;
+    height: var(--fontSize7);
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--secondayrColor);
+    }
+
+    img {
+        height: var(--fontSize7);
+    }
+}
+
+.lang-off {
+    filter: grayscale(100%);
 }
 
 .language {

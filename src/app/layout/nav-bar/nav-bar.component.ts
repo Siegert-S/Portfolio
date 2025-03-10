@@ -20,7 +20,11 @@ export class NavBarComponent {
   burgerMenuOpen = false;
   languageMenuOpen = false;
 
-  constructor() { }
+  activlanguage: LanguageKey;
+
+  constructor() {
+    this.activlanguage = this.languageService.selectedLanguage;
+  }
 
   getText(target: 'title' | number) {
     const paragraph = this.languageService.getLanguage(this.sectionKey, this.componentKey);
@@ -50,7 +54,15 @@ export class NavBarComponent {
 
   setLanguage(lang: LanguageKey) {
     this.languageService.selectLanguage(lang);
-    this.languageMenuOpen = true;
+    // this.languageMenuOpen = true;
+    this.activlanguage = lang;
   }
 
+  changeLanguage() {
+    if (this.activlanguage == 'de') {
+      this.setLanguage('en');
+    } else {
+      this.setLanguage('de');
+    }
+  }
 }

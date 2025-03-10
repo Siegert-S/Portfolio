@@ -62,7 +62,7 @@ export class ContactComponent implements AfterViewInit {
   setFocus() {
     if (this.firstField) {
       setTimeout(() => {
-        this.firstField.nativeElement.focus();
+        this.firstField.nativeElement.focus({ preventScroll: true });
       }, 0);
     }
   }

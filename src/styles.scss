@@ -87,6 +87,33 @@ app-root {
   border: 1px solid #00000000;
 }
 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondayrColor);
+  min-width: 165px;
+  border-radius: 10px;
+  border: none;
+  font-size: var(--fontSize7);
+  text-decoration: none;
+  transition: all ease-in-out 100ms;
+  margin-top: 15px;
+  padding: 10px;
+
+  &:hover {
+    background-color: var(--primaryColor);
+    min-width: 175px;
+    padding: 15px;
+    margin-top: 10px;
+  }
+
+  &:active {
+    background-color: white;
+    color: var(--secondayrColor);
+  }
+}
+
 /* poppins-100 - latin */
 @font-face {
   font-display: swap;

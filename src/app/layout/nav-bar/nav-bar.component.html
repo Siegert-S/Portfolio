@@ -33,7 +33,12 @@
                 </div>
             </a>
 
-            <div class="link language" (click)="clickLanguageMenu()">
+            <div class="language-switch" (click)="changeLanguage()">
+                <img [class.lang-off]="activlanguage=='de'  " src="../../../assets/img/flag-en.jpg" alt="">
+                <img [class.lang-off]="activlanguage=='en'  " src="../../../assets/img/flag-de.png" alt="">
+            </div>
+
+            <!-- <div class="link language" (click)="clickLanguageMenu()">
                 <div>
                     {{getText(4)}}
                 </div>
@@ -41,7 +46,7 @@
                     <div (click)="setLanguage('en')">EN</div>
                     <div (click)="setLanguage('de')">DE</div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="link-button" (click)="clickBurgerMenu()" [class.burgerMenuOpen]="burgerMenuOpen"></div>
     </div>
